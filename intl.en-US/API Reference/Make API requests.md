@@ -16,10 +16,10 @@ The following table describes the parameters in the request syntax.
 
 |Parameter|Description|
 |---------|-----------|
-|Endpoint|The endpoint of the Cloud Config API. Set the value to config.aliyuncs.com.|
+|Endpoint|The endpoint of the Cloud Config API. Set the value to config.ap-southeast-1.aliyuncs.com.|
 |Action|The name of the operation being performed. For example, to query the configuration of a resource, you must set the Action parameter to DescribeDiscoveredResource.|
 |Version|The version number of the API. Set the value to 2019-01-08.|
-|Parameters|The request parameters for the operation. Separate multiple parameters with ampersands \(&\). Request parameters include both common parameters and operation-specific parameters. Common parameters include the API version and authentication information. For more information, see [Common parameters](). |
+|Parameters|The request parameters for the operation. Separate multiple parameters with ampersands \(&\). Request parameters include both common parameters and operation-specific parameters. Common parameters include the API version and authentication information. For more information, see [Common parameters](/intl.en-US/API Reference/Common parameters.md). |
 
 ## Sample requests
 
@@ -28,7 +28,7 @@ The following example demonstrates how to call the DescribeDiscoveredResource op
 **Note:** The following code has been formatted to ease reading.
 
 ```
-https://config.aliyuncs.com/?Action=DescribeDiscoveredResource
+https://config.ap-southeast-1.aliyuncs.com/?Action=DescribeDiscoveredResource
 &Format=xml
 &Version=2019-01-08
 &Signature=xxxx%xxxx%3D
