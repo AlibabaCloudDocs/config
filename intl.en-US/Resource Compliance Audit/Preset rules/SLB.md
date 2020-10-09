@@ -20,7 +20,7 @@ Cause: Deletion protection is not enabled for an SLB instance of your Alibaba Cl
 
 -   API
 
-    You can also call the SetLoadBalancerDeleteProtection API operation. To enable deletion protection for the SLB instance, set DeletionProtection to on. For more information, see [SetLoadBalancerDeleteProtection](https://www.alibabacloud.com/help/doc-detail/122674.htm).
+    You can also call the SetLoadBalancerDeleteProtection API operation. To enable deletion protection for the SLB instance, set DeletionProtection to on.
 
 
 ## slb-listener-https-enabled
