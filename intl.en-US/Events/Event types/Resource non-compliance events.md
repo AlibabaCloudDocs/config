@@ -12,9 +12,9 @@ The following table describes the parameters for resource non-compliance events.
 |operator|The operator that compares the current configuration with the desired configuration of the resource.|
 |property|The JSON path of the current configuration.|
 |accountId|The ID of the Alibaba Cloud account to which the resource belongs.|
-|riskLevel|The risk level of the resource that is not compliant with the rule. Valid values:-   Info
--   Warning
--   Critical |
+|riskLevel|The risk level of the resource that is not compliant with the rule. Valid values:-   Info: low risk.
+-   Warning: medium risk.
+-   Critical: high risk. |
 |evaluationResultIdentifier|The detailed information about the compliance evaluation result.|
 |resourceId|The ID of the resource.|
 |configRuleName|The name of the rule.|
