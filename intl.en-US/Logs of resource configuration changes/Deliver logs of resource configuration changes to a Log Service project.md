@@ -8,9 +8,9 @@ For more information about Log Service, see [What is Log Service?](/intl.en-US/P
 
 1.  Log on to the [Cloud Config console](https://config.console.aliyun.com).
 
-2.  In the left-side navigation pane, choose **Delivery Services** \> **Deliver Logs to SLS**.
+2.  In the left-side navigation pane, choose **Delivery Services** \> **Deliver Logs to Log Service**.
 
-3.  On the **Deliver Logs to SLS** page, turn on **SLS Settings**.
+3.  On the **Deliver Logs to Log Service** page, turn on **SLS Settings**.
 
 4.  Specify a Log Service project to store logs of resource configuration changes.
 
