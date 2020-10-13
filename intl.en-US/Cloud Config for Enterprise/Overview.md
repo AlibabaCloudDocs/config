@@ -47,7 +47,7 @@ Log on to the Cloud Config console by using the master account. On the Overview 
     |------|------------------------------------------------|
     |A member account is added.|After a member account is added to the resource directory, Cloud Config for Enterprise is automatically activated for the member account. The member account inherits the rules that the master account assigns to all member accounts. The snapshots of resource configuration changes of the member account are delivered to the OSS bucket that is specified by the master account.|
     |A member account is removed.|After a member account is removed, the rules that are assigned by the master account are removed from the member account. The snapshots, logs, and resource events are no longer delivered to the destination that is specified by the master account. You can use Cloud Config for individuals with the member account.|
-    |A member account is transferred.|The directory trees on the **Rules** page and the **Resource** page of the master account are changed. The snapshots of rule evaluation and resource configurations are still delivered to the OSS bucket that is specified by the master account.|
+    |A member account is transferred.|The directory trees on the **Rules** page and the **Resources** page of the master account are changed. The snapshots of rule evaluation and resource configurations are still delivered to the OSS bucket that is specified by the master account.|
 
 
 ## Limits
