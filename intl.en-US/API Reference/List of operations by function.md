@@ -12,6 +12,8 @@ The following tables describe API operations available for use in Cloud Config.
 |[DescribeDiscoveredResource](/intl.en-US/API Reference/Resources/DescribeDiscoveredResource.md)|Queries the configuration of a resource.|
 |[GetDiscoveredResourceSummary](/intl.en-US/API Reference/Resources/GetDiscoveredResourceSummary.md)|Queries the statistics of the resources monitored by Cloud Config.|
 |[PutConfigurationRecorder](/intl.en-US/API Reference/Monitoring scope/PutConfigurationRecorder.md)|Modifies a configuration recorder.|
+|[GetResourceComplianceTimeline](/intl.en-US/API Reference/Resources/GetResourceComplianceTimeline.md)|Queries the compliance timeline of a resource.|
+|[GetResourceConfigurationTimeline](/intl.en-US/API Reference/Resources/GetResourceConfigurationTimeline.md)|Queries the configuration timeline of a resource.|
 
 ## Rules
 
@@ -20,20 +22,20 @@ The following tables describe API operations available for use in Cloud Config.
 |[DescribeConfigRule](/intl.en-US/API Reference/Rules/DescribeConfigRule.md)|Queries the details of a rule.|
 |[ListConfigRules](/intl.en-US/API Reference/Rules/ListConfigRules.md)|Queries rules in Cloud Config.|
 |[DeleteConfigRules](/intl.en-US/API Reference/Rules/DeleteConfigRules.md)|Deletes multiple rules at a time.|
-|[StartConfigRuleEvaluation](/intl.en-US/API Reference/Rules/StartConfigRuleEvaluation.md)|Uses a specified rule to evaluate the compliance of target resources.|
-|[DescribeComplianceSummary](/intl.en-US/API Reference/Rules/DescribeComplianceSummary.md)|Disables multiple rules at a time to set them to Inactive.|
+|[StartConfigRuleEvaluation](/intl.en-US/API Reference/Rules/StartConfigRuleEvaluation.md)|Evaluates the compliance of specified resources based on a rule.|
+|StopConfigRules|Disables multiple rules at a time so that these rules enter the Inactive state.|
 |[PutEvaluations](/intl.en-US/API Reference/Rules/PutEvaluations.md)|Submits the compliance evaluation results.|
 |[DescribeEvaluationResults](/intl.en-US/API Reference/Rules/DescribeEvaluationResults.md)|Queries the compliance evaluation results.|
 |[DescribeCompliance](/intl.en-US/API Reference/Rules/DescribeCompliance.md)|Queries the statistics of compliance evaluations based on compliance types.|
 |[PutConfigRule](/intl.en-US/API Reference/Rules/PutConfigRule.md)|Creates or modifies a rule.|
 |[DescribeComplianceSummary](/intl.en-US/API Reference/Rules/DescribeComplianceSummary.md)|Queries the summary of compliance evaluations from the rule and resource dimensions.|
-|[ActiveConfigRules](/intl.en-US/API Reference/Rules/ActiveConfigRules.md)|Enables multiple rules at a time to set them to **Active**.|
+|[ActiveConfigRules](/intl.en-US/API Reference/Rules/ActiveConfigRules.md)|Enables multiple rules at a time so that these rules enter the **Active** state.|
 
 ## Monitoring scope
 
 |Operation|Description|
 |---------|-----------|
-|[StartConfigurationRecorder](/intl.en-US/API Reference/Monitoring scope/StartConfigurationRecorder.md)|Starts recording configurations of the resources you have selected to record in your Alibaba Cloud account.|
+|[StartConfigurationRecorder](/intl.en-US/API Reference/Monitoring scope/StartConfigurationRecorder.md)|Starts a configuration recorder.|
 |[DescribeConfigurationRecorder](/intl.en-US/API Reference/Monitoring scope/DescribeConfigurationRecorder.md)|Queries the details of a configuration recorder.|
 
 ## Delivery methods
