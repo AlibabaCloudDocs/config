@@ -1,19 +1,24 @@
 # Disable a rule
 
-If you do not need to use a rule, you can disable it.
+This topic describes how to disable a rule. You can disable a rule if you do not temporarily need it.
 
-The master account is used to log on to the Cloud Config for Enterprise console.
+-   The master account is used to log on to the Cloud Config for Enterprise console.
+-   The status of the rule that you want to disable is **Active** in the **Status** column.
 
 1.  Log on to the [Cloud Config for Enterprise console](https://config.console.aliyun.com).
 
 2.  In the left-side navigation pane, click **Rules**.
 
-3.  On the **Rules** page that appears, find the target rule and choose ![More icon](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/3060019951/p93049.png) **Disable Rule** in the **Actions** column.
+3.  On the **Rules** page, find the rule that you want to disable, move the pointer over the ![More icon](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/3060019951/p93049.png) icon in the **Actions** column, and then select **Disable Rule**.
 
-4.  In the dialog box that appears, click **OK**. After the rule that applied to all member accounts is disabled, the rule no longer applies to the member accounts.
+4.  In the **Are you sure you want to terminate the rule?** message, click **OK**.
 
-    ![Disable a rule](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/2060019951/p86162.png)
+    After you click **OK**, the rule that applied to all member accounts no longer applies to the member accounts.
+
+5.  View the status of the rule.
+
+    On the **Rules** page, set filters to search for the rule and verify that the rule is in the **Inactive** state.
 
 
-To enable a rule that is in the **Inactive** state, find the rule and choose ![More icon](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/3060019951/p93049.png) \> **Enable Rule** in the **Actions** column. After you enable the rule, its status is changed to **Active**.
+To enable a rule that is in the **Inactive** state, find the rule, move the pointer over the ![More icon](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/3060019951/p93049.png) icon in the **Actions** column, and then select **Enable Rule**. After you enable the rule, it enters the **Active** state.
 
