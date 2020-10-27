@@ -29,6 +29,12 @@ Cloud Config is deployed in the Singapore \(Singapore\) region. To reduce packet
 |Function Compute|Service Name|Ram\_User|
 |Function Name|RamDangerousPolicyUserBindMFA|
 
+## Workflow
+
+The following figure shows the process that you can use to create a custom rule to check whether MFA is enabled for a RAM user.
+
+![Flowchart](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/8584673061/p171675.png)
+
 ## Procedure
 
 1.  Create a service in Function Compute.
