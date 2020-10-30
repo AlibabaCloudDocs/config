@@ -33,12 +33,12 @@
 |ConfigRuleArn|String|acs:config::120886317863\*\*\*\*:config-rule/cr-e4b06457e0d900df\*\*\*\*|规则的ARN。 |
 |ConfigRuleEvaluationStatus|Struct| |资源的评估状态。 |
 |FirstActivatedTimestamp|Long|1586422960385|首次激活时间戳。 |
-|FirstEvaluationStarted|Boolean|true|规则是否已执行过评估。取值：
+|FirstEvaluationStarted|Boolean|true|是否已执行过评估。取值：
 
  -   true（默认值）
 -   false |
-|LastErrorCode|String|FunctionNotFound|规则最近一次执行的错误码。 |
-|LastErrorMessage|String|function 'funtionName' does not exist in service 'serviceName'|规则最近一次执行的错误信息。 |
+|LastErrorCode|String|FunctionNotFound|规则最后一次执行的错误码。 |
+|LastErrorMessage|String|function 'funtionName' does not exist in service 'serviceName'|规则最后一次执行的错误信息。 |
 |LastFailedEvaluationTimestamp|Long|1574996580279|规则最近一次异常评估的时间戳。 |
 |LastFailedInvocationTimestamp|Long|1574996580301|规则最近一次异常调用的时间戳。 |
 |LastSuccessfulEvaluationTimestamp|Long|1586423432010|规则最近一次成功评估的时间戳。 |
@@ -48,40 +48,41 @@
 |ConfigRuleState|String|ACTIVE|当前规则的运行状态。取值：
 
  -   ACTIVE：应用中
+-   DELETING\_RESULTS：删除评估结果中
 -   EVALUATING：评估中
 -   INACTIVE：已停用 |
 |CreateBy|Struct| |规则的创建信息。 |
 |ConfigRuleSceneId|String|level3\_protection|创建规则的场景ID。
 
  **说明：** 当CreatorType为CONFIG\_RULE\_SCENE时，该参数不为空。 |
-|ConfigRuleSceneName|String|等保预检|创建规则的场景名称。
+|ConfigRuleSceneName|String|等级保护2.0|创建规则的场景名称。
 
  **说明：** 当CreatorType为CONFIG\_RULE\_SCENE时，该参数不为空。 |
-|CreatorId|String|level3\_protection|创建者ID。
+|CreatorId|String|12346789|创建者ID。
 
- **说明：** 当CreatorType为CONFIG\_RULE\_SCENE时，该参数不为空。 |
-|CreatorName|String|等保预检|创建者名称。
+ **说明：** 当CreatorType为RESOURCE\_DIRECTORY时，该参数表示企业管理账号的ID。 |
+|CreatorName|String|测试管理账号|创建者名称。
 
- **说明：** 当CreatorType为CONFIG\_RULE\_SCENE时，该参数不为空。 |
+ **说明：** 当CreatorType为RESOURCE\_DIRECTORY时，该参数表示企业管理账号的名称。 |
 |CreatorType|String|CONFIG\_RULE\_SCENE|创建者类型。取值：
 
  -   RESOURCE\_DIRECTORY：当您使用企业版配置审计时，由企业管理账号创建规则。
--   CONFIG\_RULE\_SCENE：当您使用个人版配置审计时，系统自动创建某些应用场景，例如：等保预检、OSS合规基线、CIS合规检测。 |
+-   CONFIG\_RULE\_SCENE：当您使用个人版配置审计时，系统自动创建某些应用场景，例如：等保预检场景。 |
 |CreateTimestamp|Long|1586423432010|创建规则时的时间戳。 |
 |Description|String|您账号下的RDS实例CPU数量大于等于您设置的阈值，视为“合规”。|规则的描述信息。 |
 |InputParameters|Map|\{"cpuCount": "2" \}|规则入参。 |
 |ManagedRule|Struct| |托管规则详情。 |
 |CompulsoryInputParameterDetails|Map|\{"cpuCount":\{"type":"integer","defaultValue":"2"\}\}|托管规则必填参数的信息。 |
-|Description|String|您账号下的RDS实例CPU数量大于等于您设置的阈值，视为“合规”。|托管规则的描述信息。 |
-|Identifier|String|rds-cpu-min-count-limit|托管规则的标识符。 |
+|Description|String|您账号下的RDS实例CPU数量大于等于您设置的阈值，视为“合规”。|托管规则描述信息。 |
+|Identifier|String|rds-cpu-min-count-limit|托管规则标识符。 |
 |Labels|List|\["RDS","CPU"\]|托管规则的标签列表。 |
-|ManagedRuleName|String|rds-cpu-min-count-limit|托管规则的名称。 |
+|ManagedRuleName|String|rds-cpu-min-count-limit|托管规则名称。 |
 |OptionalInputParameterDetails|Map|\{"tag1Value":\{"type":"string","defaultValue":""\},"tag2Key":\{"type":"string","defaultValue":""\}\}|托管规则可选参数的描述。 |
 |SourceDetails|Array of SourceDetails| |托管规则详情。 |
 |EventSource|String|aliyun.config|规则的事件来源。
 
  **说明：** 目前仅支持配置审计事件：aliyun.config。 |
-|MaximumExecutionFrequency|String|Six\_Hours|规则的执行周期。取值：
+|MaximumExecutionFrequency|String|One\_Hour|规则执行周期。取值：
 
  -   One\_Hour：1小时
 -   Three\_Hours：3小时
@@ -91,20 +92,13 @@
 |MessageType|String|ConfigurationItemChangeNotification|规则的触发机制。取值：
 
  -   ConfigurationItemChangeNotification：配置变更
--   ScheduledNotification：周期执行 |
-|MaximumExecutionFrequency|String|Six\_Hours|规则的执行周期。取值：
-
- -   One\_Hour：1小时
--   Three\_Hours：3小时
--   Six\_Hours：6小时
--   Twelve\_Hours：12小时
--   TwentyFour\_Hours：24小时 |
-|ModifiedTimestamp|Long|1586423432010|规则最近一次修改的时间戳。 |
+-   ScheduledNotification：周期 |
+|ModifiedTimestamp|Long|1586423432010|规则最后修改的时间戳。 |
 |RiskLevel|Integer|1|规则的风险等级。取值：
 
- -   1：高风险
--   2：中风险
--   3：低风险 |
+ -   1：Critical
+-   2：Warning
+-   3：Info |
 |Scope|Struct| |规则的监控范围。 |
 |ComplianceResourceId|String|vpc-6weoy5flv41pj4wvr\*\*\*\*|待评估资源ID。
 
@@ -115,7 +109,7 @@
 
  -   如果规则使用了托管规则，则该参数为托管规则名称。
 -   如果规则使用了自定义函数，则该参数为函数ARN。 |
-|Owner|String|ALIYUN|规则来源的归属。取值：
+|Owner|String|ALIYUN|规则引用的规则函数的归属方。取值：
 
  -   CUSTOM\_FC：用户自定义函数
 -   ALIYUN：托管规则 |
@@ -140,7 +134,7 @@
     -   LessOrEquals：小于等于
     -   Greater：大于
     -   GreaterOrEquals：大于等于
--   当数据类型为基于Base64进制编码的Base64 String时，取值：
+-   当数据类型为基于Base64进制编码的字符串Base64String时，取值：
     -   Base64Contains：包含
     -   NotBase64Contains：不包含
     -   Base64ContainsAll：包含全部
@@ -168,7 +162,7 @@
 |MessageType|String|ScheduledNotification|规则的触发机制。取值：
 
  -   ConfigurationItemChangeNotification：配置变更
--   ScheduledNotification：周期执行 |
+-   ScheduledNotification：周期 |
 |RequestId|String|A7A0FFF8-0B44-40C6-8BBF-3A185EFDF3D0|请求ID。 |
 
 ## 示例
@@ -186,59 +180,62 @@ http(s)://[Endpoint]/?Action=DescribeConfigRule
 `XML` 格式
 
 ```
-<DescribeConfigRuleResponse>
-	  <RequestId>F63DFAFD-CE84-495D-A800-9E94B22C2346</RequestId>
-	  <ConfigRule>
-		    <ManagedRule>
-			      <ManagedRuleName>rds-desired-instance-type</ManagedRuleName>
-			      <Description>您账号下所有的RDS实例类型均已在阈值中列举出，视为“合规”。</Description>
-			      <Identifier>rds-desired-instance-type</Identifier>
-			      <CompulsoryInputParameterDetails>
-				        <instanceTypes>
-					          <defaultValue>rds.mysql.s2.large</defaultValue>
-					          <description>实例类型</description>
-					          <type>string</type>
-				        </instanceTypes>
-			      </CompulsoryInputParameterDetails>
-			      <Labels>RDS</Labels>
-			      <SourceDetails>
-				        <EventSource>aliyun.config</EventSource>
-				        <MessageType>ConfigurationItemChangeNotification</MessageType>
-			      </SourceDetails>
-			      <HelpUrl>https://help.aliyun.com/document_detail/147676.html#title-rt6-m9w-a52</HelpUrl>
-		    </ManagedRule>
-		    <Description>This rule is evaluated to compliant if all types of ApsaraDB RDS instances are included in the parameter value.</Description>
-		    <ConfigRuleEvaluationStatus>
-			      <FirstActivatedTimestamp>1602818958115</FirstActivatedTimestamp>
-			      <LastSuccessfulEvaluationTimestamp>1602818964884</LastSuccessfulEvaluationTimestamp>
-			      <FirstEvaluationStarted>false</FirstEvaluationStarted>
-		    </ConfigRuleEvaluationStatus>
-		    <ConfigRuleState>ACTIVE</ConfigRuleState>
-		    <Source>
-			      <Owner>ALIYUN</Owner>
-			      <Identifier>rds-desired-instance-type</Identifier>
-			      <SourceConditions>
-				        <Operator>In</Operator>
-				        <DesiredValue>rds.mysql.s2.large</DesiredValue>
-				        <Required>true</Required>
-				        <SelectPath>$.DBInstanceClass</SelectPath>
-			      </SourceConditions>
-			      <SourceDetails>
-				        <EventSource>aliyun.config</EventSource>
-				        <MessageType>ConfigurationItemChangeNotification</MessageType>
-			      </SourceDetails>
-		    </Source>
-		    <ConfigRuleId>cr-138e6457e0d90072cc14</ConfigRuleId>
-		    <Scope>
-			      <ComplianceResourceTypes>ACS::RDS::DBInstance</ComplianceResourceTypes>
-		    </Scope>
-		    <ConfigRuleArn>acs:config::1208863178612953:config-rule/cr-138e6457e0d90072cc14</ConfigRuleArn>
-		    <ConfigRuleName>rds-desired-instance-type</ConfigRuleName>
-		    <RiskLevel>1</RiskLevel>
-		    <InputParameters>
-			      <instanceTypes>rds.mysql.s2.large</instanceTypes>
-		    </InputParameters>
-	  </ConfigRule>
+<DescribeConfigRuleResponse> 
+    <RequestId>A7A0FFF8-0B44-40C6-8BBF-3A185EFDF3D0</RequestId>  
+    <HttpStatusCode>200</HttpStatusCode>  
+    <Success>true</Success>  
+    <ConfigRule> 
+        <ManagedRule>   
+            <Identifier>rds-cpu-min-count-limit</Identifier>  
+            <Description>您账号下的RDS实例CPU数量大于等于您设置的阈值，视为“合规”。</Description>    
+            <CompulsoryInputParameterDetails> 
+                <cpuCount> 
+                    <defaultValue>2</defaultValue>  
+                    <type>integer</type> 
+                </cpuCount> 
+            </CompulsoryInputParameterDetails>    
+            <ManagedRuleName>rds-cpu-min-count-limit</ManagedRuleName>  
+            <Labels>RDS</Labels>  
+            <Labels>CPU</Labels>   
+            <CreateBy> 
+                <CreatorType>CONFIG_RULE_SCENE</CreatorType>  
+                <ConfigRuleSceneId>level3_protection</ConfigRuleSceneId>  
+                <ConfigRuleSceneName>等级保护2.0</ConfigRuleSceneName> 
+            </CreateBy>  
+            <SourceDetails> 
+                <EventSource>aliyun.config</EventSource>  
+                <MessageType>ConfigurationItemChangeNotification</MessageType> 
+            </SourceDetails> 
+        </ManagedRule>  
+        <Description>您账号下的RDS实例CPU数量大于等于您设置的阈值，视为“合规”。</Description>  
+        <ConfigRuleEvaluationStatus> 
+            <FirstActivatedTimestamp>1586422960385</FirstActivatedTimestamp>  
+            <FirstEvaluationStarted>true</FirstEvaluationStarted>  
+            <LastSuccessfulInvocationTimestamp>1586423432352</LastSuccessfulInvocationTimestamp> 
+        </ConfigRuleEvaluationStatus>  
+        <ConfigRuleState>ACTIVE</ConfigRuleState>  
+        <Source> 
+            <Owner>ALIYUN</Owner>  
+            <Identifier>rds-cpu-min-count-limit</Identifier>  
+            <SourceDetails> 
+                <EventSource>aliyun.config</EventSource>  
+                <MaximumExecutionFrequency>Six_Hours</MaximumExecutionFrequency>  
+                <MessageType>ScheduledNotification</MessageType> 
+            </SourceDetails> 
+        </Source>  
+        <ConfigRuleId>cr-2a914fcf617e00c9****</ConfigRuleId>  
+        <Scope> 
+            <ComplianceResourceId></ComplianceResourceId>  
+            <ComplianceResourceDirectoryId>rd-WY****</ComplianceResourceDirectoryId>  
+            <ComplianceResourceTypes>ACS::RDS::DBInstance</ComplianceResourceTypes> 
+        </Scope>  
+        <ConfigRuleArn>acs:config::120886317863****:config-rule/cr-e4b06457e0d900df****</ConfigRuleArn>  
+        <ConfigRuleName>rds-cpu-min-count-limit-rd</ConfigRuleName>  
+        <RiskLevel>1</RiskLevel>  
+        <InputParameters> 
+            <cpuCount>2</cpuCount> 
+        </InputParameters> 
+    </ConfigRule> 
 </DescribeConfigRuleResponse>
 ```
 
@@ -246,68 +243,63 @@ http(s)://[Endpoint]/?Action=DescribeConfigRule
 
 ```
 {
-	"RequestId": "F63DFAFD-CE84-495D-A800-9E94B22C2346",
-	"ConfigRule": {
-		"ManagedRule": {
-			"ManagedRuleName": "rds-desired-instance-type",
-			"Description": "您账号下所有的RDS实例类型均已在阈值中列举出，视为“合规”。",
-			"Identifier": "rds-desired-instance-type",
-			"CompulsoryInputParameterDetails": {
-				"instanceTypes": {
-					"defaultValue": "rds.mysql.s2.large",
-					"description": "实例类型",
-					"type": "string"
-				}
-			},
-			"Labels": [
-				"RDS"
-			],
-			"SourceDetails": [
-				{
-					"EventSource": "aliyun.config",
-					"MessageType": "ConfigurationItemChangeNotification"
-				}
-			],
-			"HelpUrl": "https://help.aliyun.com/document_detail/147676.html#title-rt6-m9w-a52"
-		},
-		"Description": "This rule is evaluated to compliant if all types of ApsaraDB RDS instances are included in the parameter value.",
-		"ConfigRuleEvaluationStatus": {
-			"FirstActivatedTimestamp": 1602818958115,
-			"LastSuccessfulEvaluationTimestamp": 1602818964884,
-			"FirstEvaluationStarted": false
-		},
-		"ConfigRuleState": "ACTIVE",
-		"Source": {
-			"Owner": "ALIYUN",
-			"Identifier": "rds-desired-instance-type",
-			"SourceConditions": [
-				{
-					"Operator": "In",
-					"DesiredValue": "rds.mysql.s2.large",
-					"Required": true,
-					"SelectPath": "$.DBInstanceClass"
-				}
-			],
-			"SourceDetails": [
-				{
-					"EventSource": "aliyun.config",
-					"MessageType": "ConfigurationItemChangeNotification"
-				}
-			]
-		},
-		"ConfigRuleId": "cr-138e6457e0d90072cc14",
-		"Scope": {
-			"ComplianceResourceTypes": [
-				"ACS::RDS::DBInstance"
-			]
-		},
-		"ConfigRuleArn": "acs:config::1208863178612953:config-rule/cr-138e6457e0d90072cc14",
-		"ConfigRuleName": "rds-desired-instance-type",
-		"RiskLevel": 1,
-		"InputParameters": {
-			"instanceTypes": "rds.mysql.s2.large"
-		}
-	}
+    "RequestId": "A7A0FFF8-0B44-40C6-8BBF-3A185EFDF3D0",
+    "HttpStatusCode": 200,
+    "Success": true,
+    "ConfigRule": {
+        "ManagedRule": {
+            "Identifier": "rds-cpu-min-count-limit",
+            "Description": "您账号下的RDS实例CPU数量大于等于您设置的阈值，视为“合规”。",
+            "CompulsoryInputParameterDetails": {
+                "cpuCount": {
+                    "defaultValue": 2,
+                    "type": "integer"
+                }
+            },
+            "ManagedRuleName": "rds-cpu-min-count-limit",
+            "Labels": [
+                "RDS",
+                "CPU"
+            ],
+            "CreateBy": {
+                "CreatorType": "CONFIG_RULE_SCENE",
+                "ConfigRuleSceneId": "level3_protection",
+                "ConfigRuleSceneName": "等级保护2.0"
+            },
+            "SourceDetails": {
+                "EventSource": "aliyun.config",
+                "MessageType": "ConfigurationItemChangeNotification"
+            }
+        },
+        "Description": "您账号下的RDS实例CPU数量大于等于您设置的阈值，视为“合规”。",
+        "ConfigRuleEvaluationStatus": {
+            "FirstActivatedTimestamp": 1586422960385,
+            "FirstEvaluationStarted": true,
+            "LastSuccessfulInvocationTimestamp": 1586423432352
+        },
+        "ConfigRuleState": "ACTIVE",
+        "Source": {
+            "Owner": "ALIYUN",
+            "Identifier": "rds-cpu-min-count-limit",
+            "SourceDetails": {
+                "EventSource": "aliyun.config",
+                "MaximumExecutionFrequency": "Six_Hours",
+                "MessageType": "ScheduledNotification"
+            }
+        },
+        "ConfigRuleId": "cr-2a914fcf617e00c9****",
+        "Scope": {
+            "ComplianceResourceId": "",
+            "ComplianceResourceDirectoryId": "rd-WY****",
+            "ComplianceResourceTypes": "ACS::RDS::DBInstance"
+        },
+        "ConfigRuleArn": "acs:config::120886317863****:config-rule/cr-e4b06457e0d900df****",
+        "ConfigRuleName": "rds-cpu-min-count-limit-rd",
+        "RiskLevel": 1,
+        "InputParameters": {
+            "cpuCount": 2
+        }
+    }
 }
 ```
 
