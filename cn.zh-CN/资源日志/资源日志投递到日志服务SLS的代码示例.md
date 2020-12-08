@@ -9,25 +9,23 @@
 |参数|说明|
 |--|--|
 |accountId|资源所属阿里云账号ID。|
-|arn|资源ARN，例如：对象存储OSS的存储桶，ARN格式为`arn:acs:oss:{regionId}:{Aliuid}:{bucketName}`，各参数含义如下：-   `{regionId}`：存储桶所在地域ID。
--   `{Aliuid}`：阿里云账号ID。
--   `{bucketName}`：存储桶名称。 |
-|captureTime|配置审计发现资源变更事件的时间戳。|
+|arn|资源ARN。各云服务资源类型对应的ARN格式，请参见[ARN格式]()。|
+|captureTime|配置审计发现资源变更事件并生成日志的时间戳。时间戳转换方法，请参见[Unix时间戳](https://oktools.net/timestamp)。|
 |configuration|资源的详细配置。|
-|configurationDiff|资源事件的变更项。|
+|configurationDiff|资源配置变更的具体变更项及变更前后信息。|
 |regionId|资源所在地域ID。|
-|resourceCreateTime|创建资源的时间戳。|
+|resourceCreateTime|创建资源的时间戳。时间戳转换方法，请参见[Unix时间戳](https://oktools.net/timestamp)。|
 |resourceEventType|资源变更事件的类型。取值：-   DISCOVERED：新建资源事件。
 -   MODIFY：修改资源事件。
 -   REMOVE：删除资源事件。 |
 |resourceId|资源ID。|
 |resourceName|资源名称。|
-|resourceType|资源类型，例如：ACS::OSS::Bucket。|
+|resourceType|资源类型。支持的资源类型请参见[支持配置审计的云服务](/cn.zh-CN/产品简介/支持配置审计的云服务.md)。|
 |tags|资源的标签。|
 
 ## 新建资源
 
-新建资源的代码示例如下：
+阿里云账号在对象存储OSS的上海地域新建存储桶（Bucket） new-bucket，在configurationDiff中显示变更前信息（null）和变更后信息。代码示例如下：
 
 ```
 accountId:1208863178****
@@ -46,7 +44,7 @@ tags:{}
 
 ## 更新资源
 
-更新资源的代码示例如下：
+阿里云账号在对象存储OSS的上海地域更新存储桶new-bucket的读写权限，在configurationDiff中显示变更前信息public-read-write（公共读写）和变更后信息private（私有）。代码示例如下：
 
 ```
 accountId:12088631786*****
@@ -65,7 +63,7 @@ tags:{}
 
 ## 删除资源
 
-删除资源的代码示例如下：
+阿里云账号在对象存储OSS的上海地域删除存储桶new-bucket，在configurationDiff中显示变更前信息和变更后信息（null）。代码示例如下：
 
 ```
 accountId:1208863178****
