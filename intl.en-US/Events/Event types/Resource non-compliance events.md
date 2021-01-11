@@ -1,34 +1,35 @@
 # Resource non-compliance events
 
-If you have configured rules, Cloud Config evaluates your resources based on the rules at regular intervals or when resource configuration changes. If a resource is evaluated as **non-compliant**, Cloud Config will send a notification to you in a timely manner.
+Cloud Config automatically evaluates the compliance of a resource. If a resource is evaluated to be **non-compliant**, Cloud Config sends a notification to you by using Message Service \(MNS\). This topic describes the parameters and sample code of resource non-compliance events.
 
-The following table describes the parameters for resource non-compliance events.
+The following table describes the parameters of resource non-compliance events.
 
 |Parameter|Description|
 |---------|-----------|
-|annotation|The description of the non-compliant configuration.|
-|configuration|The current configuration of the resource.|
-|desiredValue|The desired configuration of the resource.|
-|operator|The operator that compares the current configuration with the desired configuration of the resource.|
-|property|The JSON path of the current configuration.|
-|accountId|The ID of the Alibaba Cloud account to which the resource belongs.|
-|riskLevel|The risk level of the resource that is not compliant with the rule. Valid values:-   Info: low risk.
--   Warning: medium risk.
--   Critical: high risk. |
-|evaluationResultIdentifier|The detailed information about the compliance evaluation result.|
+|annotation|The description of the non-compliant resource.|
+|configuration|The actual configurations of the resource.|
+|desiredValue|The expected configurations of the resource.|
+|operator|The operator that compares the current configurations with the expected configurations of the resource.|
+|property|The JSON path of the configurations in the resource property struct, for example, `$.AccessControlList.Grant`.|
+|accountId|The ID of the Alibaba Cloud account that owns the resource.|
+|riskLevel|The risk level of the resource that is not compliant with the rule. Valid values:-   Info: low risk
+-   Warning: medium risk
+-   Critical: high risk |
+|evaluationResultIdentifier|The details of the compliance evaluation result.|
 |resourceId|The ID of the resource.|
 |configRuleName|The name of the rule.|
 |configRuleArn|The Alibaba Cloud Resource Name \(ARN\) of the rule.|
 |configRuleId|The ID of the rule.|
 |regionId|The ID of the region where the resource resides.|
-|resourceType|The type of the resource.|
-|eventType|The type of the event. Valid values:-   ResourceChange: indicates a configuration change event.
--   ResourceCompliance: indicates a non-compliance event.
--   SnapshotDelivery: indicates a snapshot delivery event. |
-|complianceType|The compliance evaluation result of the resource. Valid values:-   COMPLIANT: The resource is evaluated as compliant.
--   NON\_COMPLIANT: The resource is evaluated as non-compliant. |
+|resourceOwnerId|The ID of the Alibaba Cloud account that owns the resource.|
+|resourceType|The type of the resource. For more information about supported resource types, see [Alibaba Cloud services that support Cloud Config](/intl.en-US/Product Introduction/Alibaba Cloud services that support Cloud Config.md).|
+|eventType|The type of the event. Valid values:-   ResourceChange: indicates a resource change event.
+-   ResourceCompliance: indicates a resource non-compliance event.
+-   SnapshotDelivery: indicates a resource snapshot delivery event. |
+|complianceType|The compliance evaluation result of the resource. Valid values:-   COMPLIANT: The resource is evaluated to be compliant.
+-   NON\_COMPLIANT: The resource is evaluated to be non-compliant. |
 
-Example
+In this example, a rule named test-oss-bucket-public-read-prohibited is created by using an Alibaba Cloud account in Cloud Config for Enterprise. The rule is used to evaluate the read and write permissions of an Object Storage Service \(OSS\) bucket named config-snapshot that resides in the Singapore \(Singapore\) region. The actual configurations of the bucket config-snapshot are public-read. The expected configurations are NotContains read. The evaluation result is NonCompliant. The following sample code is used:
 
 ```
 {
@@ -44,7 +45,9 @@ Example
       "configRuleName": "test-oss-bucket-public-read-prohibited",
       "configRuleArn": "acs:config::169827232854****:config-rule/cr-610ad6e0007300a8****",
       "configRuleId": "cr-610ad6e0007300a8****",
-      "regionId": "Singapore",
+      "regionId": "ap-southeast-1",
+      "resourceName":"config-snapshot",
+      "resourceOwnerId":169827232854****,
       "resourceType": "ACS::OSS::Bucket"
     }
   },
