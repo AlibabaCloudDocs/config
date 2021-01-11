@@ -9,9 +9,9 @@ For more information about MNS, see [What is MNS?]()
 
 1.  Log on to the [Cloud Config console](https://config.console.aliyun.com).
 
-2.  In the left-side navigation pane, choose **Delivery Services** \> **Send Notifications to MNS**.
+2.  In the left-side navigation pane, choose **Delivery Services** \> **Subscribe to Resource Events**.
 
-3.  On the **Send Notifications to MNS** page, turn on the **MNS Settings** switch.
+3.  On the Subscribe to Resource Events page, turn on the **MNS Settings** switch.
 
 4.  Specify an MNS topic to receive event notifications.
 
