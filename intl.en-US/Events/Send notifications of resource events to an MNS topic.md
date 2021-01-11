@@ -8,9 +8,9 @@ For more information about MNS, see [What is MNS?]()
 
 1.  Log on to the [Cloud Config console](https://config.console.aliyun.com).
 
-2.  In the left-side navigation pane, choose **Delivery Services** \> **Send Notifications to MNS**.
+2.  In the left-side navigation pane, choose **Delivery Services** \> **Subscribe to Resource Events**.
 
-3.  On the **Send Notifications to MNS** page, turn on the **MNS Settings** switch.
+3.  On the Subscribe to Resource Events page, turn on the **MNS Settings** switch.
 
 4.  Set the required parameters to specify an MNS topic to receive event notifications.
 
@@ -21,7 +21,7 @@ For more information about MNS, see [What is MNS?]()
     |**MNS Region**|The region where the topic resides.|
     |**Topic Name**|The name of the MNS topic. The topic name must be unique within an Alibaba Cloud account in a region.    -   If you select **Create a topic**, you must specify a topic name.
     -   If you select **Select an existing topic of your account**, you must select an existing topic from the Topic Name drop-down list. |
-    |**Maximum Message Size \(Byte\)**|The maximum length of the message body that can be sent to the topic. Unit: bytes. Valid values: 1024 to 65536. Default value: 65536. **Note:** We recommend that you set this parameter to a value greater than or equal to 8192. Otherwise, the notification delivery may fail due to the length limit. |
+    |**Maximum Message Size \(Byte\)**|The maximum length of the notification body that can be sent to the topic. Unit: bytes. Valid values: 1024 to 65536. Default value: 65536. **Note:** We recommend that you set this parameter to a value greater than or equal to 8192. Otherwise, the notification delivery may fail due to the length limit. |
     |**Enable Logging**|Specifies whether to enable log management for the topic.|
     |**Minimum Risk Level of the Events to Subscribe**|The lowest risk level of the events to which you want to subscribe. Valid values:     -   **All Risk Levels**
     -   **High Risk**
