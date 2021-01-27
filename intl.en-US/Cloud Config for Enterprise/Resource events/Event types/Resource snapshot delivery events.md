@@ -1,10 +1,10 @@
 # Resource snapshot delivery events
 
-When a resource snapshot is delivered to a specified Object Storage Service \(OSS\) bucket, Cloud Config for Enterprise sends a notification to you by using Message Service \(MNS\). This topic describes the parameters and sample code in successful and failed delivery of resource snapshot delivery events.
+When a resource snapshot is delivered to a specified Object Storage Service \(OSS\) bucket, Cloud Config for Enterprise sends a resource snapshot delivery event to a specified topic of Message Service \(MNS\). Then, MNS sends a notification to you based on the push method of the topic. This topic describes the parameters and sample code in successful and failed sending of resource snapshot delivery events to MNS.
 
-## Successful delivery of resource snapshot delivery events
+## Successful sending of resource snapshot delivery events to MNS
 
-The following table describes the parameters in successful delivery of resource snapshot delivery events.
+The following table describes the parameters.
 
 |Parameter|Description|
 |---------|-----------|
@@ -13,9 +13,9 @@ The following table describes the parameters in successful delivery of resource 
 |eventType|The type of the event. Valid values:-   ResourceChange: indicates a resource change event.
 -   ResourceCompliance: indicates a resource non-compliance event.
 -   SnapshotDelivery: indicates a resource snapshot delivery event. |
-|notificationCreationTime|The timestamp when the resource delivery event is created.|
+|notificationCreationTime|The timestamp that is generated when the resource delivery event is created.|
 
-In this example, the resource snapshot delivery event is named SnapshotDeliverySuccess, and the delivery to MNS is successful. The following sample code is used:
+The following sample code is used:
 
 ```
 {
@@ -26,9 +26,9 @@ In this example, the resource snapshot delivery event is named SnapshotDeliveryS
 }
 ```
 
-## Failed delivery of resource snapshot delivery events
+## Failed sending of resource snapshot delivery events to MNS
 
-The following table describes the parameters in failed delivery of resource snapshot delivery events.
+The following table describes the parameters.
 
 |Parameter|Description|
 |---------|-----------|
@@ -37,10 +37,10 @@ The following table describes the parameters in failed delivery of resource snap
 |eventType|The type of the event. Valid values:-   ResourceChange: indicates a resource change event.
 -   ResourceCompliance: indicates a resource non-compliance event.
 -   SnapshotDelivery: indicates a resource snapshot delivery event. |
-|errorCause|The reason why the resource snapshot delivery event fails to be delivered.|
-|notificationCreationTime|The timestamp when the resource delivery event is created.|
+|errorCause|The reason why the resource snapshot delivery event fails to be sent.|
+|notificationCreationTime|The timestamp that is generated when the resource delivery event is created.|
 
-In this example, the resource snapshot delivery event is named SnapshotDeliveryFailed, and the delivery to MNS is failed. The value of the errorCause parameter is NoSuchBucket, which indicates that the specified destination bucket does not exist. The following sample code is used:
+The value of the errorCause parameter is NoSuchBucket, which indicates that the specified destination bucket does not exist. The following sample code is used:
 
 ```
 {
