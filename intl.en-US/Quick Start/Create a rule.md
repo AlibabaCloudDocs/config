@@ -12,17 +12,17 @@ Before you create a rule, you must familiarize yourself with the definition of r
 
 4.  In the **Basic Settings** step, specify **Method**, set the relevant parameters, and then click **Next**.
 
-    ![Basic Settings step](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/9741333061/p86601.png)
+    ![Basic Settings step](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9741333061/p86601.png)
 
     -   If you select **Managed Rule**, you can select a managed rule that Cloud Config provides, and then select a risk level.
     -   If you select **Function Compute**, you must enter a rule name, select the Alibaba Cloud Resource Name \(ARN\) of a function, and then select a risk level.
 
-        Before you can select a function, you must create a function in the Function Compute console. For more information, see[Function operations](https://www.alibabacloud.com/help/doc-detail/52077.htm).
+        Before you can select a function, you must create a function in the Function Compute console. For more information, see [Function operations](https://www.alibabacloud.com/help/doc-detail/52077.htm).
 
     -   If you select **Visual Editor**, you must enter a rule name and select a risk level.
 5.  In the **Parameter Settings** step, set relevant parameters and click **Next**.
 
-    ![Parameter Settings step](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/9741333061/p86602.png)
+    ![Parameter Settings step](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9741333061/p86602.png)
 
     -   If you set the **Method** parameter to **Managed Rule** in the **Basic Settings** step, you can specify only the threshold values of the input parameters.
     -   If you set the **Method** parameter to **Function Compute** in the **Basic Settings** step, you can specify the trigger type, resource type, and input parameters of the rule.
