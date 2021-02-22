@@ -6,7 +6,7 @@ You can create a rule to check whether ApsaraDB RDS instances are High-availabil
 
 2.  In the left-side navigation pane, click **Rules**.
 
-3.  On the**Rules** page, click **Create Rule**.
+3.  On the **Rules** page, click **Create Rule**.
 
 4.  In the **Basic Settings** step, select **Managed Rule** in the **Method** section, find and select the **rds-high-availability-category** rule, select a risk level for the rule, and then click **Next**.
 
