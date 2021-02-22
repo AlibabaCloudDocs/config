@@ -18,7 +18,7 @@ For more information about the managed rules that Cloud Config provides, see [Ma
 
 4.  In the **Basic Settings** step, set the **Method** parameter to **Managed Rule**. Select a managed rule and risk level, specify whether to apply the rule to all member accounts, and then click **Next**.
 
-    ![Managed rule: Basic Settings step](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/3708478851/p97236.png)
+    ![Managed rule: Basic Settings step](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3708478851/p97236.png)
 
 5.  In the **Parameter Settings** step, specify the value of the input parameter and click **Submit**.
 
@@ -26,7 +26,7 @@ For more information about the managed rules that Cloud Config provides, see [Ma
 
 6.  If you have set the Apply Rule to All Members parameter to Yes in the **Basic Settings** step, a message appears. In the message, click **OK**. Then, the rule is applied to all member accounts. You can specify the Apply Rule to All Members parameter only when you create a rule. The parameter cannot be modified after the rule is created.
 
-    ![Confirmation message](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/4708478851/p97243.png)
+    ![Confirmation message](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/4708478851/p97243.png)
 
 7.  View the rule creation result.
 
@@ -47,7 +47,7 @@ You can create a rule function in Function Compute and use the rule function to 
 
 4.  In the **Basic Settings** step, set the **Method** parameter to **Function Compute**. Enter a rule name, select a risk level, specify a function and whether to apply the rule to all member accounts, and then click **Next**.
 
-    ![Function Compute: Basic Settings step](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/3708478851/p97246.png)
+    ![Function Compute: Basic Settings step](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3708478851/p97246.png)
 
     You can select a function only after you have created one in Function Compute. If you have not created a function in Function Compute, click **Create New Function** to create a function in the Function Compute console. For more information, see [Function operations](https://www.alibabacloud.com/help/doc-detail/52077.htm).
 
@@ -57,7 +57,7 @@ You can create a rule function in Function Compute and use the rule function to 
     -   You can click Add Rule Parameter to add an input parameter. You must enter the key and value for each input parameter in the **Key** and **Value** fields. The key of an input parameter must be the same as the configuration name of the resource.
 6.  If you have set the Apply Rule to All Members parameter to Yes in the **Basic Settings** step, a message appears. In the message, click **OK**. Then, the rule is applied to all member accounts. You can specify the Apply Rule to All Members parameter only when you create a rule. The parameter cannot be modified after the rule is created.
 
-    ![Confirmation message](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/4708478851/p97243.png)
+    ![Confirmation message](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/4708478851/p97243.png)
 
 7.  View the rule creation result.
 
@@ -74,13 +74,13 @@ You can create a rule function in Function Compute and use the rule function to 
 
 3.  On the **Rules** page, click **Create Rule**.
 
-4.  In the **Basic Settings** step, set the **Method** parameter to **Visual Editor**. Enter a rule name, select a risk level, specify whether to apply the rule to all member accounts, and then click**Next**.
+4.  In the **Basic Settings** step, set the **Method** parameter to **Visual Editor**. Enter a rule name, select a risk level, specify whether to apply the rule to all member accounts, and then click **Next**.
 
 5.  In the **Parameter Settings** step, select the related resource, specify the input parameters, and then click **Submit**.
 
 6.  If you have set the Apply Rule to All Members parameter to Yes in the **Basic Settings** step, a message appears. In the message, click **OK**. Then, the rule is applied to all member accounts. You can specify the Apply Rule to All Members parameter only when you create a rule. The parameter cannot be modified after the rule is created.
 
-    ![Confirmation message](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/4708478851/p97243.png)
+    ![Confirmation message](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/4708478851/p97243.png)
 
 7.  View the rule creation result.
 
