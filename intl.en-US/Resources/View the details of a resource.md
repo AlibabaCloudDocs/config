@@ -14,5 +14,5 @@ In the Cloud Config console, you can set filters to search for resources that me
 
     -   In the **Basic Information** section, you can view the ID, name, type, and tags of the resource, the time when the resource was created, and the region and zone where the resource resides.
     -   In the **Configuration Details** section, you can view the configuration of the resource. You can also click View JSON to view the complete resource configuration in JSON format.
-    -   In the**Most Recent Evaluation** section, you can view the latest compliance evaluation result of the resource.
+    -   In the **Most Recent Evaluation** section, you can view the latest compliance evaluation result of the resource.
 
