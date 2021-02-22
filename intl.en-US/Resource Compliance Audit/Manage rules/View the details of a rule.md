@@ -32,5 +32,5 @@ In the **Compliance Result of Related Resources** section, you can view the reso
 -   Click **Details**. You can view the resource details on the Details tab.
 -   Click **Configuration Timeline**. You can view the configuration timeline of the resource on the Configuration Timeline tab.
 -   Click **Compliance Timeline**. You can view the compliance timeline of the resource on the Compliance Timeline tab.
--   Click the ![More icon](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/3060019951/p93049.png) icon and select**Manage**. You can manage the resource in the corresponding console that appears.
+-   Click the ![More icon](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3060019951/p93049.png) icon and select **Manage**. You can manage the resource in the corresponding console that appears.
 
