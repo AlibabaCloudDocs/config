@@ -56,5 +56,12 @@ This topic lists the Alibaba Cloud services and resource types that support Clou
 |Domain name group|ACS::DNS::DomainGroup|
 |Domain name|ACS::DNS::Domain|
 |Microservice Engine \(MSE\)|Cluster|ACS::MSE::Cluster|
-|Operation Orchestration Service \(OOS\)|Configuration list|ACS::OOS::Inventory **Note:** For more information about the concept and data structure of ACS::OOS::Inventory, see [Appendix: ACS::OOS::Inventory](/intl.en-US/.md). |
+|Operation Orchestration Service \(OOS\)|Application manifest|ACS::OOS::Inventory.Application|
+|File list|ACS::OOS::Inventory.File|
+|Instance details|ACS::OOS::Inventory.InstanceInformation|
+|Network Configuration List|ACS::OOS::Inventory.Network|
+|Service listing|ACS::OOS::Inventory.Service|
+|Windows registry manifest|ACS::OOS::Inventory.WindowsRegistry|
+|Windows Role List|ACS::OOS::Inventory.WindowsRole|
+|Windows Update List|ACS::OOS::Inventory.WindowsUpdate|
 
