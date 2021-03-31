@@ -1,6 +1,6 @@
 # Overview
 
-After you authorize Cloud Config to access your resources, you can view the resources that reside in different regions under your account in the Cloud Config console. You can set filters or enter a resource ID to search for the specified resource and view information about the resource. You can also go to the cloud service console of the resource from the Cloud Config console to manage the resource. Cloud Config will also continuously track and record changes to the resource, keeping the configuration change history of the resource for 10 years by default. You can view these configuration history snapshots from the console or query through the API.
+After you authorize Cloud Config to access your resources, you can view the resources that reside in different regions under your account in the Cloud Config console. You can set filters or enter a resource ID to search for the specified resource and view information about the resource. You can also go to the cloud service console of the resource from the Cloud Config console to manage the resource. Cloud Config will also continuously track and record changes to the resource, keeping the configuration change history of the resource for 10 years by default. You can view these configuration change history of the resource from the console or query through the API.
 
 The following table describes the operations that you can perform on resources under your account by using the features of Cloud Config.
 
