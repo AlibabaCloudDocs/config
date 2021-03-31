@@ -1,6 +1,6 @@
 # View the configuration timeline of a resource
 
-Cloud Config records each detailed configuration change of the resources that it monitors, and displays the configuration changes over time in a configuration timeline.
+Cloud Config records each detailed configuration change of the resources that it monitors, and displays the configuration changes over time in a configuration timeline. After you authorize and enable CloudConfig, CloudConfig will start recording your resource configuration history and keep it for 10 years by default.
 
 The configuration timeline of a resource includes the following elements:
 
