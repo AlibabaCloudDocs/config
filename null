@@ -1,6 +1,6 @@
-# 查看资源变更事件
+# View the events that trigger the configuration change of a resource
 
-配置审计服务与操作审计服务打通，您既能看到窗口期前后配置的变更，也能看到使配置发生此变更的操作事件列表和详情，包括用户、IP、时间、API名称等操作信息。
+Cloud Config integrates with ActionTrail. You can view the configuration before and after the 10-minute interval at which Cloud Config detects a configuration change, the events that trigger the change, and event details in Cloud Config. The details of an event include the user who triggered the event, source IP address, the time when the event occurred, and the API operation called in this event.
 
-您可以登录[ActionTrail管理控制台](https://actiontrail.console.aliyun.com)进行查看。
+You can also log on to the [ActionTrail console](https://actiontrail.console.aliyun.com) to view the events that trigger the configuration change.
 
