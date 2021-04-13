@@ -1,11 +1,6 @@
-# View the recent configuration change records of your resources
+# 查看资源变更事件
 
-You can view the configuration change records within the last seven days of your resources in the Cloud Config console.
+配置审计服务与操作审计服务打通，您既能看到窗口期前后配置的变更，也能看到使配置发生此变更的操作事件列表和详情，包括用户、IP、时间、API名称等操作信息。
 
-1.  Log on to the [Cloud Config console](https://config.console.aliyun.com).
-
-2.  On the **Overview** page, view the configuration change records within the last seven days of your resources in the **Recent Changes** section.
-
-3.  Find the resource for which you want to view the details and click the resource ID in the **Resource ID / Resource Name** column. On the Details tab, view the resource details.
-
+您可以登录[ActionTrail管理控制台](https://actiontrail.console.aliyun.com)进行查看。
 
