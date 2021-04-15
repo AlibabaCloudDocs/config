@@ -21,7 +21,7 @@ If you no longer need to perform CIS compliance checks on resources, you can del
 
 3.  On the **Compliance Package** page, click the required account group tab.
 
-4.  On the required account group tab, click **Delete**in the **Actions** column of the required CIS compliance package.
+4.  On the required account group tab, click **Delete** in the **Actions** column of the required CIS compliance package.
 
 5.  In the **Delete** message, click **OK**.
 
