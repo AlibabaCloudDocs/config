@@ -1,71 +1,69 @@
-# 等保2.0解读
+# Baseline for Classified Protection of Cybersecurity 2.0
 
-本文为您解读等保2.0的具体内容，介绍配置审计的等保预检能力。
+This topic describes Baseline for Classified Protection of Cybersecurity 2.0 and the protection screening feature of Cloud Config.
 
-## 什么是等保2.0
+## What is Baseline for Classified Protection of Cybersecurity 2.0?
 
-等保2.0是指网络安全等级保护制度2.0国家标准，该标准已于2019年5月13日正式发布，并于2019年12月1日正式实施。目前58%的国家已制定国家网络安全战略，主要国家和地区都已制定专门的网络立法。等保2.0的发展和演进史如下图所示。
+Baseline for Classified Protection of Cybersecurity 2.0 stipulates the national cybersecurity standards in China. The Chinese government officially released it on May 13, 2019 and officially implemented it on December 1, 2019. Currently, 58% of the countries and regions in the world have formulated national strategies for cybersecurity. Major countries and regions have legislated for cybersecurity. The following figure shows the development of Baseline for Classified Protection of Cybersecurity 2.0.
 
-![等保2.0](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9046948951/p88102.png)
+## Important changes in Baseline for Classified Protection of Cybersecurity 2.0
 
-## 等保2.0的重要变化
+-   Information systems on the cloud can be evaluated.
 
--   云上信息系统纳入检测范围。
+    Based on Baseline for Classified Protection of Cybersecurity 1.0, Baseline for Classified Protection of Cybersecurity 2.0 adds specifications for cloud computing platforms, big data platforms, Internet of Things \(IoT\) platforms, mobile computing systems, and industrial control systems. The specifications fully consider the diversity and complexity of the business carried by current enterprise information systems.
 
-    基于等保1.0的网络和信息系统，新增了云计算平台、大数据平台、物联网、移动互联技术系统、工业控制系统。充分考虑了当前企业信息系统的业务多样性和复杂性。
+-   Cloud vendors and cloud tenants are evaluated separately.
 
--   云上租户的信息系统区别于云平台成为独立的检测对象。
+    In Baseline for Classified Protection of Cybersecurity 1.0, the level of a cloud platform on which enterprise resources are hosted determines the level of an information system that a cloud tenant builds on the platform. As cloud services become increasingly complex and flexible, cloud tenants have increased control over hosted resources. Therefore, from Baseline for Classified Protection of Cybersecurity 2.0 on, the information systems built by cloud tenants on cloud platforms will be evaluated independently.
 
-    在等保1.0中，企业托管资源的云平台通过相应等保等级，即认为相应云上租户通过了相应等级。随着云上服务的复杂度和灵活性日渐成熟，云上租户对托管的资源具有越来越高的控制权，所以从等保2.0开始，云上租户使用云平台服务所构建的云上信息系统将作为独立的检测对象。
+-   Continuous security evaluation is emphasized.
 
--   强调持续的安全能力构建，而非一次性检测。
+    According to Baseline for Classified Protection of Cybersecurity 1.0, the compliance of a system is evaluated only once. After the evaluation is completed, you cannot monitor whether the system can continuously be compliant with the specifications. Baseline for Classified Protection of Cybersecurity 2.0 integrates the requirement for continuous compliance into the specifications to guide and supervise enterprises so they can build information systems with sustainable security capabilities. Based on the policy-centered protection, detection, and response \(PPDR\) model, enterprises are instructed to construct a three-dimensional and in-depth defense system that is trusted, controllable, and manageable. The defense system must be constructed based on security authentication and with access control as the core.
 
-    等保1.0主要关注在检测当时系统的合规状态，检测完成后，系统是否能持续保持安全合规是无法监管的。等保2.0在制定过程中，将对系统的持续合规要求融入到条例中，引导并监督企业构建一个可持续保护信息系统的安全能力。以PPDR（以策略为中心，构建防护、检测和响应防护机制）为核心思想、以可信认证为基础、以访问控制为核心，构建可信、可控和可管的立体化纵深防御体系。
+    |Requirement|Description|
+    |-----------|-----------|
+    |Trusted|Construct a trusted execution environment for business systems based on trusted computing. To prevent users from being impersonated and prevent viruses and intrusions, users, platforms, and applications must be trusted. A trusted environment guarantees the security and reliability of the business systems, which always run as expected with no unexpected processes.|
+    |Controllable|Enable subjects to control the access behavior of objects based on access control to make sure that all access activities are controllable. Controlled access effectively prevents both internal and external attacks. Controlled access also protects information systems from unauthorized operations and unauthorized resource access. This guarantees that information systems are secure and controllable.|
+    |Manageable|Construct a management platform that allows administrators to manage permissions in a centralized and hierarchical way and grant minimal permissions to users for better system management. Such a management platform makes up for less focus on management. This also guarantees that information systems are secure and controllable.|
 
-    |分类|说明|
-    |--|--|
-    |可信|以可信计算技术为基础，构建一个可信的业务系统执行环境，即用户、平台、程序都是可信的，确保用户无法被冒充、病毒无法执行、入侵行为无法成功。可信的环境保证业务系统永远都按照设计预期的方式执行，不会出现非预期的流程，从而保障了业务系统安全可信。|
-    |可控|以访问控制技术为核心，实现主体对客体的受控访问，保证所有的访问行为均在可控范围之内进行，在防范内部攻击的同时有效防止了从外部发起的攻击行为。对用户访问权限的控制可以确保系统中的用户不会出现越权操作，永远都按系统设计的方式进行资源访问，保证了系统的信息安全可控。|
-    |可管|通过构建集中管控、最小权限管理与三权分立的管理平台，为管理员创建了一个工作平台，使其可以借助于本平台对系统进行更好的管理，从而弥补了我们现在重机制、轻管理的不足，保证信息系统安全可管。|
+    Baseline for Classified Protection of Cybersecurity 2.0 uses "one center, triple protection" as the design philosophy for cybersecurity technology. One center refers to the security management center. Triple protection refers to the secure computing environment, the security zone border, and the secure communications network.
 
-    等保2.0以“一个中心，三重防护”为网络安全技术设计的总体思路，其中一个中心即安全管理中心，三重防护即安全计算环境、安全区域边界和安全通信网络。
+    -   The security management center must implement centralized control in system management, security management, and audit management. The protection must be transformed from passive to active, from static to dynamic, from single-point to all-around, and from extensive to precise.
+    -   Triple protection requires enterprises to use security devices and technologies to implement security measures such as identity authentication, access control, intrusion prevention, data integrity, confidentiality, and personal information protection. Triple protection enables all-around protection for cloud platforms.
 
-    -   安全管理中心要求在系统管理、安全管理、审计管理三个方面实现集中管控，从被动防护转变到主动防护，从静态防护转变到动态防护，从单点防护转变到整体防护，从粗放防护转变到精准防护。
-    -   三重防护要求企业通过安全设备和技术手段实现身份鉴别、访问控制、入侵防范、数据完整性、保密性、个人信息保护等安全防护措施，实现平台的全方位安全防护。
+The following table lists the differences between Baseline for Classified Protection of Cybersecurity 1.0 and 2.0.
 
-等保1.0和2.0的差异如下表所示。
+|Baseline for Classified Protection of Cybersecurity 1.0|Baseline for Classified Protection of Cybersecurity 2.0|
+|-------------------------------------------------------|-------------------------------------------------------|
+|In-depth defense with attack prevention, attack response, and security audit.|All-around defense with active prevention, security authentication, threat detection, and comprehensive audit.|
+|If the evaluation points are greater than 0, the official evaluation is passed. The official evaluation for Level 3 Protection of Cybersecurity is required every year and that for Level 4 Protection of Cybersecurity is required every six months.|If the evaluation points reach 75, the official evaluation is passed. Annual evaluation is required for both Level 3 Protection of Cybersecurity and Level 4 Protection of Cybersecurity.|
 
-|等保1.0|等保2.0|
-|-----|-----|
-|事前预防、事中响应、事后审计的纵深防御思路。|在“一个中心、三重防护”的理念基础上，注重全方位主动防御、安全可信、动态感知和全面审计。|
-|0分以上基本符合。等保三级每年检测一次，等保四级每半年检测一次。|75分以上基本符合，等保三级和四级每年检测一次。|
+## Five difficulties for information systems on the cloud to conform to Baseline for Classified Protection of Cybersecurity 2.0
 
-## 云上信息系统过等保的五大困难
+Baseline for Classified Protection of Cybersecurity 2.0 focuses on continuous compliance supervision and requires annual evaluation for both Level 3 Protection of Cybersecurity and Level 4 Protection of Cybersecurity. Information systems on the cloud have difficulties in conforming to Baseline for Classified Protection of Cybersecurity 2.0 because resources are hosted on the cloud.
 
-等保2.0侧重视持续的合规监管能力，且要求等保三级和等保四级均每年检测一次。但资源托管在云端，云上信息系统过等保，具体困难如下表所示。
+|Difficulty|Description|
+|----------|-----------|
+|Unclear evaluation targets|Some concepts of the virtualized IT infrastructure are different from those of the traditional IT infrastructure. Evaluating complex cloud configurations becomes difficult.|
+|Non-centralized resource management|If a cloud platform does not support configuration management databases \(CMDBs\), you have to endure a cumbersome process of providing evidence and demonstrating information systems on the cloud to authoritative agencies during the repeated evaluation and rectification.|
+|Less control over the system data|Resources are hosted on the cloud. You must obtain security audits from the cloud platform if Baseline for Classified Protection of Cybersecurity 2.0 requires management logs and compliance reports as evidence.|
+|Impossible self-evaluation by writing code|In the past, all enterprises had on-premises CMDBs and could write code to monitor and evaluate configurations on their own before the official evaluation. However, resources are now hosted on the cloud. Evaluating configurations on their own by writing code requires continuous configuration synchronization from the cloud, which is too costly.|
+|Separated deployment of a business system|If the deployment mode is hybrid cloud, a business system is deployed separately on the cloud and on-premises. In this case, you must perform self-evaluation, scanning, monitoring, or detection twice, which leads to large costs in labor and time.|
 
-|困难|说明|
-|--|--|
-|云上检测范围不明确|虚拟化IT设施与传统IT的部分概念不同，面对复杂的云上配置，无从下手。|
-|无集中的资源管理|云平台如果不提供配置管理数据库（CMDB）能力，在等保的反复检测和整改过程中，仅向检测结构举证和演示云上系统详情，操作就非常繁琐。|
-|自己不掌握系统数据|资源托管在云端，等保2.0要求举证管理行为的日志和合规情况，需要依赖云平台对审计数据的输出。|
-|无法自建自动化检测|通常云下企业都有自己的配置管理数据库CMDB（Configuration Management Database），只要合规和要求明确，完全可以自己写脚本扫描配置完成自检和监控。现在资源托管在云上，如果想通过脚本实现自检，则需要持续同步云上配置到云下，仅配置同步就消耗巨大的成本。|
-|混合云截断成两部分|混合云的技术选型导致同一个业务系统部分在云上，部分在云下，无论是自检、扫描、监控或检测，都必须分开两次，人力和时间成本巨大。|
+## Continuous monitoring on cloud platforms
 
-## 借助云平台能力，实现持续监管
+To resolve the preceding difficulties, Alibaba Cloud provides the protection screening feature in Cloud Config free of charge. This feature assists enterprises in self-evaluation and rectification.
 
-针对以上五大困难，阿里云在配置审计服务中，为您提供免费的等保预检能力，在等保预检和建设整改环节为企业助力。
+Cloud Config interprets the specifications of Baseline for Classified Protection of Cybersecurity 2.0 as rules, continuously monitors resource changes, evaluates resource compliance in real time, and triggers alerts for non-compliance. This informs enterprises in a timely manner whether information systems on the cloud are compliant.
 
-配置审计将等保2.0条例解读为云上的合规检测规则，并持续监控资源的变更，动态实时的执行合规评估，及时推送不合规告警，让企业能时刻掌握云上信息系统的合规性。
+![Evaluation process of Baseline for Classified Protection of Cybersecurity 2.0](../images/p88109.png)
 
-![等保流程](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9046948951/p88109.png)
+## Features
 
-## 功能特性
+Based on Baseline for Classified Protection of Cybersecurity 2.0, Cloud Config provides the following features:
 
-配置审计中等保2.0的功能特性如下：
-
--   等保2.0条例解读为检测规则：将云上等保2.0条例实现为一组监控规则，只需一键即可启动持续的等保预检，为正式检测做好准备。
--   动态、持续、可控的检测：通过持续追踪资源的变更，实时地触发相关联规则的评估。等保2.0要求达到75分即可通过，所以支持停止或忽略规则操作，避免持续出现无需关注的不合规告警。
--   不合规告警与修正：可以订阅等保2.0检测的不合规告警，收到告警后上云进行整改，或为具体的条例设置修正逻辑，在不合规发生时自动修正。
--   下载检测报告：可将检测结果下载到本地，便于云下分配任务并跟进整改，也可作为向检测机构举证时的辅助素材。
+-   Rules based on Baseline for Classified Protection of Cybersecurity 2.0: Cloud Config interprets the specifications of Baseline for Classified Protection of Cybersecurity 2.0 as rules. Before the official evaluation, you can enable continuous protection screening with one click.
+-   Dynamic, continuous, and controllable evaluation: Cloud Config continuously tracks resource changes and evaluates resources in real time according to rules. According to Baseline for Classified Protection of Cybersecurity 2.0, if the evaluation points reach 75, the evaluation targets conform to the standards. In this case, you can stop or ignore the evaluation of compliant resources and skip persistent alerts that do not require attention.
+-   Alerts for non-compliance and automatic rectification: Cloud Config allows you to subscribe to notifications for resources that are not compliant with Baseline for Classified Protection of Cybersecurity 2.0 and remediate non-compliant resources on the cloud. Cloud Config also supports automatic rectification after you specify the rectification logic for specific specifications.
+-   Protection screening report download: You can download the protection screening reports to a local computer. This facilitates local task allocation and rectification on the cloud. The reports can also be presented as a piece of evidence to authoritative agencies.
 
