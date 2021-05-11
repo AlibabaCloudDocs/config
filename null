@@ -1,36 +1,32 @@
-# View the details of a rule
+# 规则的定义及运行原理
 
-This topic describes how to view the details of a rule. On the Rule Details tab of the details page of a rule, you can view the statistics on resources that are monitored based on the rule. You can also view the basic information and trigger type of the rule and the compliance evaluation results of related resources.
+合规性即代码，规则是企业合规要求的代码式诠释。合规条款对应一段规则代码，代码的本质是对一条资源配置的判断逻辑。配置审计服务使用函数计算服务的函数来承载规则代码，称之为规则函数。在配置审计服务中引用规则函数，配置关联资源、触发机制、规则参数等信息后，就构成了配置审计服务中的规则。
 
-## Statistics on resources
+在实际的合规监控中，就是通过实时的资源配置变更触发规则函数的执行，来判断某个资源配置是否合规。多个规则的组合就实现了对整个资源配置的合规监控。
 
-In the statistics section of the Rule Details tab, you can view the statistics on resources that are monitored based on the rule.
+## 规则的定义
 
-|Item|Description|
-|----|-----------|
-|Total Audited|The total number of resources that have been monitored based on the rule after you enable the rule. The resources that you have released are included.|
-|Currently Auditing|The number of resources that are being monitored based on the rule. The resources that you have released are excluded.|
-|Compliant|The number of resources that are considered **Compliant** based on the rule in the last evaluation.|
-|Non-compliant|The number of resources that are considered **Non-compliant** based on the rule in the last evaluation.|
+规则的本质是一段判断逻辑，判断资源的某一个配置项是否合规，具备以下特点：
 
-**Note:** The numbers that are described in the preceding table indicate the number of resources rather than the number of resource types.
+-   规则函数的入参是通过API查询资源获取的配置项，例如：资源的规格、所属地域、名称、状态、端口或网口开关状态等。入参名称与配置项名称保持一致。
+-   规则函数的逻辑是对入参值的判断，判断逻辑由您的代码决定，例如：当负载均衡的HTTPS监听状态为开启时，视为合规。入参为负载均衡的资源上代表HTTPS监听状态的配置字段，而当该字段值表示关闭时，视为不合规。
+-   规则函数的出参是合规结果。
 
-## Basic information
+## 规则指向的资源类型
 
-In the Basic Information section, you can view the name, description, status, and Alibaba Cloud Resource Name \(ARN\) of the rule. You can also view the time when the rule was created and the last time when the rule was triggered.
+在函数计算中定义的规则函数，此时还不具有目标指向性，因为该规则函数未指向具体的资源类型。不同资源之间可能存在同名的配置参数，仅仅根据规则函数的入参设置无法实现准确的合规评估。
 
-## Trigger
+因此需要您在配置审计中，将已经创建好的规则函数与确定的资源类型绑定。当该类型的实体资源发生配置变更时，配置审计先找到资源关联的规则，再根据具体配置的变更来判断待触发的规则。
 
-In the Trigger section, you can view the trigger type, monitoring scope, and input parameters of the rule. You can also view the scope of changes that can trigger the rule.
+## 规则的触发
 
-## Compliance evaluation results of related resources
+当资源发生配置变更时，配置审计能够准确定位发生变更的配置，以变更参数作为入参的规则函数，自动触发规则执行，评估本次变更的结果是否合规。因此规则函数的入参名称要与实际资源配置的参数名称保持一致。
 
-In the Compliance Result of Related Resources section, you can view the compliance evaluation results of the specified types of resources that are monitored based on the rule. Assume that Elastic Compute Service \(ECS\) instances are monitored based on the rule. If you have 20 ECS instances, the compliance evaluation results of the 20 ECS instances are displayed in this section.
+此外，配置审计还支持您将规则设置为周期触发，可定期为您执行合规评估。
 
-In the **Compliance Result of Related Resources** section, you can view the resource ID, resource type, and compliance evaluation result of a resource in the last evaluation. In the **Actions** column, you can perform the following operations:
+## 合规评估的结果
 
--   Click **Details**. You can view the resource details on the Details tab.
--   Click **Configuration Timeline**. You can view the configuration timeline of the resource on the Configuration Timeline tab.
--   Click **Compliance Timeline**. You can view the compliance timeline of the resource on the Compliance Timeline tab.
--   Click the ![More icon](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3060019951/p93049.png) icon and select **Manage**. You can manage the resource in the corresponding console that appears.
+配置审计将获取的变更结果作为入参传入规则函数，规则函数返回合规结果给配置审计，在配置审计控制台以各种方式为您呈现和统计，请参见[查看规则评估结果](/cn.zh-CN/资源合规审计/查看合规结果/查看规则评估结果.md)。
+
+您可以在函数计算服务中自定义规则函数，请参见[使用函数计算新建规则]()。您也可以使用配置审计为您准备的托管规则，请参见[托管规则列表](/cn.zh-CN/托管规则/托管规则列表.md)。
 
