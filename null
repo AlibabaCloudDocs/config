@@ -1,32 +1,32 @@
-# 规则的定义及运行原理
+# Rule definition and implementation
 
-合规性即代码，规则是企业合规要求的代码式诠释。合规条款对应一段规则代码，代码的本质是对一条资源配置的判断逻辑。配置审计服务使用函数计算服务的函数来承载规则代码，称之为规则函数。在配置审计服务中引用规则函数，配置关联资源、触发机制、规则参数等信息后，就构成了配置审计服务中的规则。
+Compliance as code refers to defining the compliance requirements of your enterprise as rule code. Rule code is the logic that determines whether the configuration of a resource is compliant. Cloud Config uses functions of Function Compute to run rule code. These functions are called rule functions. You can create a rule in Cloud Config based on the rule functions by specifying the related resources, trigger type, and input parameters.
 
-在实际的合规监控中，就是通过实时的资源配置变更触发规则函数的执行，来判断某个资源配置是否合规。多个规则的组合就实现了对整个资源配置的合规监控。
+When the configuration of a resource changes, Cloud Config runs the rule function to determine whether the configuration is compliant. You can use multiple rules to monitor the compliance of all configuration items of a resource.
 
-## 规则的定义
+## Rule definition
 
-规则的本质是一段判断逻辑，判断资源的某一个配置项是否合规，具备以下特点：
+A rule is the logic that determines whether a configuration item of a resource is compliant. Each rule has the following features:
 
--   规则函数的入参是通过API查询资源获取的配置项，例如：资源的规格、所属地域、名称、状态、端口或网口开关状态等。入参名称与配置项名称保持一致。
--   规则函数的逻辑是对入参值的判断，判断逻辑由您的代码决定，例如：当负载均衡的HTTPS监听状态为开启时，视为合规。入参为负载均衡的资源上代表HTTPS监听状态的配置字段，而当该字段值表示关闭时，视为不合规。
--   规则函数的出参是合规结果。
+-   The input parameters of a rule are the configuration items that can be obtained by calling the API operations of the corresponding cloud service. The configuration items can be the resource specifications, resource region, resource name, resource status, HTTP port, or Internet network port. The keys of the input parameters must be the same as the configuration items of a resource.
+-   A rule function uses the logic that is determined by your code to check whether the value of an input parameter is compliant. For example, a rule considers a Server Load Balancer \(SLB\) instance as compliant if an HTTPS listener is enabled for the instance. For this rule, the input parameter is the configuration item that specifies the HTTPS listener status of the SLB instance. If the value of the configuration item indicates that an HTTPS listener is disabled, then the rule determines that the SLB instance is non-compliant.
+-   The output parameters of a rule function indicate the compliance evaluation result.
 
-## 规则指向的资源类型
+## Associated resource types of a rule
 
-在函数计算中定义的规则函数，此时还不具有目标指向性，因为该规则函数未指向具体的资源类型。不同资源之间可能存在同名的配置参数，仅仅根据规则函数的入参设置无法实现准确的合规评估。
+After you create a rule function in the Function Compute console, the rule function is not associated with a resource type. In addition, different resources may have the input parameters with the same name. Cloud Config cannot accurately evaluate the compliance only based on the input parameters of the rule function.
 
-因此需要您在配置审计中，将已经创建好的规则函数与确定的资源类型绑定。当该类型的实体资源发生配置变更时，配置审计先找到资源关联的规则，再根据具体配置的变更来判断待触发的规则。
+Therefore, you must apply the rule functions to specified types of resources in Cloud Config. If you change the configuration of a resource of a specified type, Cloud Config locates the rules that are associated with the resource type. Then, Cloud Config determines the rules to be triggered based on the specific configuration changes.
 
-## 规则的触发
+## Trigger type of a rule
 
-当资源发生配置变更时，配置审计能够准确定位发生变更的配置，以变更参数作为入参的规则函数，自动触发规则执行，评估本次变更的结果是否合规。因此规则函数的入参名称要与实际资源配置的参数名称保持一致。
+If you change the configuration of a resource, Cloud Config locates the changed configuration item and uses the values of these items as the values of the input parameters. Then, Cloud Config triggers one or more rules to evaluate whether the changed configuration is compliant. Therefore, the keys of the input parameters must be the same as the configuration items of a resource.
 
-此外，配置审计还支持您将规则设置为周期触发，可定期为您执行合规评估。
+Cloud Config can also trigger a rule at a specified frequency to periodically evaluate the compliance of a resource.
 
-## 合规评估的结果
+## Compliance evaluation result
 
-配置审计将获取的变更结果作为入参传入规则函数，规则函数返回合规结果给配置审计，在配置审计控制台以各种方式为您呈现和统计，请参见[查看规则评估结果](/intl.zh-CN/资源合规审计/查看合规结果/查看规则评估结果.md)。
+If Cloud Config detects that the value of a configuration item has been changed, Cloud Config triggers the rule that uses the configuration item as the input parameter. After the rule returns the compliance evaluation result to Cloud Config, you can view the result and relevant statistics by using various methods in the Cloud Config console. For more information, see [View the compliance evaluation results](/intl.en-US/Resource Compliance Audit/View compliance results/View the compliance evaluation results.md).
 
-您可以在函数计算服务中自定义规则函数，请参见[使用函数计算新建规则]()。您也可以使用配置审计为您准备的托管规则，请参见[托管规则列表](/intl.zh-CN/托管规则/托管规则列表.md)。
+You can create custom rule functions in Function Compute and use the rule functions to create rules. For more information, see [Create a custom rule by using Function Compute](). You can also create rules based on the managed rules that Cloud Config provides. For more information, see [Managed rules](/intl.en-US/Preset rules/Managed rules.md).
 
