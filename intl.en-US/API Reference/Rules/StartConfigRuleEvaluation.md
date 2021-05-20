@@ -12,18 +12,6 @@ Uses a specified rule to evaluate the compliance of target resources.
 |---------|----|--------|-------|-----------|
 |Action|String|Yes|StartConfigRuleEvaluation|The operation that you want to perform. Set the value to StartConfigRuleEvaluation. |
 |ConfigRuleId|String|Yes|cr-2a914fcf617e00c9\*\*\*\*|The ID of the rule. |
-|MultiAccount|Boolean|No|false|Specifies whether to use the specified rule under the member accounts of the current master account for resource compliance evaluation.
-
- -   true: Use the specified rule under the specified member account or all the member accounts in the resource directory of the current master account to evaluate the target resources.
--   false: Use the specified rule under the current master account to evaluate the target resources. This is the default value.
-
- **Note:** If you are using Cloud Config for individuals, ignore this parameter. |
-|MemberId|Long|No|1234567|The ID of the member account to which the rule to be used belongs. This parameter is empty by default. This parameter is available only when MultiAccount is set to true.
-
- -   When MemberId is left empty, the system uses the specified rule under the current master account and all its member accounts to evaluate the target resources.
--   When MemberId is set to a specific value, the system uses the specified rule under the specified member account to evaluate the target resources.
-
- **Note:** If you are using Cloud Config for individuals, ignore this parameter. |
 
 ## Response parameters
 
@@ -40,7 +28,7 @@ Uses a specified rule to evaluate the compliance of target resources.
 Sample requests
 
 ```
-http(s)://[Endpoint]/? Action=StartConfigRuleEvaluation
+http(s)://[Endpoint]/?Action=StartConfigRuleEvaluation
 &ConfigRuleId=cr-2a914fcf617e00c9****
 &<Common request parameters>
 ```
