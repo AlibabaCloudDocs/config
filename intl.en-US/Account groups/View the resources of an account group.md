@@ -22,5 +22,5 @@ For more information, see [View the configuration timeline of a resource](/intl.
 
 ## View the compliance timeline of a resource
 
-For more information, see [View the compliance timeline of a resource](/intl.en-US/Resource Compliance Audit/View compliance results/View the compliance timeline of a resource.md).
+For more information, see [View the compliance timeline of a resource](https://www.alibabacloud.com/help/doc-detail/127407.htm).
 
