@@ -10,17 +10,17 @@ A management account is used to log on to the Cloud Config console.
 
 ## View the resource list
 
-For more information, see [t1782213.md\#](/intl.en-US/Resources/View the resource list.md).
+For more information, see [View the resource list](/intl.en-US/Resources/View the resource list.md).
 
 ## View the details of a resource
 
-For more information, see [t1782210.md\#](/intl.en-US/Resources/View the details of a resource.md).
+For more information, see [View the details of a resource](/intl.en-US/Resources/View the details of a resource.md).
 
 ## View the configuration timeline of a resource
 
-For more information, see [t1463376.md\#](/intl.en-US/Resources/View the configuration timeline of a resource.md).
+For more information, see [View the configuration timeline of a resource](/intl.en-US/Resources/View the configuration timeline of a resource.md).
 
 ## View the compliance timeline of a resource
 
-For more information, see [t1463383.md\#](/intl.en-US/Resource Compliance Audit/View compliance results/View the compliance timeline of a resource.md).
+For more information, see [View the compliance timeline of a resource](/intl.en-US/Resource Compliance Audit/View compliance results/View the compliance timeline of a resource.md).
 
