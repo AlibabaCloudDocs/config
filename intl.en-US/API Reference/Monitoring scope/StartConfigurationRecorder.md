@@ -25,7 +25,7 @@ This article will provide an example of using a common account to open the Cloud
 
 **Note:** The Enterprise Cloud Config has been upgraded to account group function. |
 
-For details of public request parameters, please refer to [Common parameters](~~169575~~) .
+For details of public request parameters, please refer to [Common parameters](~~169575~~).
 
 ## Response parameters
 
