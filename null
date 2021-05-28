@@ -1,0 +1,19 @@
+# 服务授权
+
+在您使用配置审计之前，必须先授权。
+
+请确保您已完成阿里云[账号注册](https://account.aliyun.com/register/register.htm)和[实名认证](https://account.console.aliyun.com/#/auth/home)。
+
+请确保您已完成阿里云[账号注册](https://account.alibabacloud.com/register/intl_register.htm)和[实名认证](https://account-intl.console.aliyun.com/#/intlAuth)。
+
+服务授权仅获取您资源配置的只读权限，不会对您其他服务的运行产生任何影响。
+
+1.  登录[配置审计控制台](https://config.console.aliyun.com)。
+
+2.  单击**允许创建**。
+
+    ![配置审计授权](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3022559951/p89255.png)
+
+    **说明：** 配置审计需要2~10分钟时间对您的资源进行扫描，构建资源列表，请耐心等待。
+
+
