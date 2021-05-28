@@ -1,17 +1,17 @@
-# 服务授权
+# Authorize Cloud Config to access your resources
 
-在您使用配置审计之前，必须先授权。
+You must authorize Cloud Config to access your resources before you can use it to track configuration changes of your resources and evaluate configuration compliance.
 
-请确保您已完成阿里云[账号注册](https://account.alibabacloud.com/register/intl_register.htm)和[实名认证](https://account-intl.console.aliyun.com/#/intlAuth)。
+Make sure that you have completed [account registration](https://account.alibabacloud.com/register/intl_register.htm) and [real-name verification](https://account-intl.console.aliyun.com/#/intlAuth) with Alibaba Cloud.
 
-服务授权仅获取您资源配置的只读权限，不会对您其他服务的运行产生任何影响。
+When you authorize Cloud Config to access data in other Alibaba Cloud services, the running of these services is not affected. Only the read-only permissions on resource configurations are granted to Cloud Config.
 
-1.  登录[配置审计控制台](https://config.console.aliyun.com)。
+1.  Log on to the [Cloud Config console](https://config.console.aliyun.com).
 
-2.  单击**允许创建**。
+2.  In the Authorize step, click **Allow** to create the service linked role that authorizes Cloud Config to access your resources.
 
-    ![配置审计授权](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3022559951/p89255.png)
+    ![Authorize Cloud Config](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7635560951/p89255.png)
 
-    **说明：** 配置审计需要2~10分钟时间对您的资源进行扫描，构建资源列表，请耐心等待。
+    **Note:** Cloud Config needs 2 to 10 minutes to scan your resources and generate a resource list.
 
 
