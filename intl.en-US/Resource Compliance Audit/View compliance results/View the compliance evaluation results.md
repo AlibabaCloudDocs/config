@@ -1,8 +1,28 @@
 # View the compliance evaluation results
 
-You can view the compliance evaluation results that are returned by a rule in the Cloud Config console by using one of the following methods:
+This topic describes how to view the compliance evaluation results that are generated based on a rule in the Cloud Config console.
 
--   Method 1: On the **Overview** page, view the statistics on the compliance evaluation results in the **Compliance** section.
--   Method 2: On the **Rules** page, find the rule and view the statistics on the compliance evaluation results in the **Compliance** column.
--   Method 3: View the compliance evaluation results on the Rule Details tab of the details page of the rule. For more information, see [View the details of a rule](/intl.en-US/Resource Compliance Audit/Manage rules/View the details of a rule.md).
+## Use an ordinary account
+
+-   Method 1: View the value in the column in the **Rules** list. You can perform the following steps:
+    1.  Log on to the [Cloud Config console](https://config.console.aliyun.com).
+    2.  In the left-side navigation pane, click **Rules**.
+-   Method 2: Go to the **Result** tab. You can perform the following steps:
+    1.  Log on to the [Cloud Config console](https://config.console.aliyun.com).
+    2.  In the left-side navigation pane, click **Rules**.
+    3.  On the **Rules** page, find the rule for which you want to view the compliance evaluation results. Then, click the rule name in the column or click in the column.
+    4.  Click the **Result** tab.
+
+## Use a management account
+
+-   Method 1: View the value in the column in the **Rules** list. You can perform the following steps:
+    1.  Log on to the [Cloud Config console](https://config.console.aliyun.com).
+    2.  In the left-side navigation pane, click **Rules**.
+    3.  On the **Rules** page, click the required account group tab.
+-   Method 2: Go to the **Result** tab. You can perform the following steps:
+    1.  Log on to the [Cloud Config console](https://config.console.aliyun.com).
+    2.  In the left-side navigation pane, click **Rules**.
+    3.  On the **Rules** page, click the required account group tab.
+    4.  On the account group tab, find the rule for which you want to view the compliance evaluation results. Then, click the rule name in the column or click in the column.
+    5.  Click the **Result** tab.
 
