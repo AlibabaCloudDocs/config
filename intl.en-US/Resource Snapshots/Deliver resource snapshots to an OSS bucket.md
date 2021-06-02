@@ -4,8 +4,9 @@ If you want to deliver resource change snapshots and scheduled resource snapshot
 
 OSS is activated. For more information, see [Activate OSS](/intl.en-US/Console User Guide/Sign up for OSS.md).
 
--   For more information about OSS, see [What is OSS?](/intl.en-US/Product Introduction/What is OSS?.md).
--   For information about the code samples that are used to deliver an object in the JSON format, see [Sample code used to deliver resource snapshots to OSS]().
+To achieve a balance between storage costs and scenario-specific requirements, we recommend that you select **Standard** for the **Storage Class** parameter when you create an OSS bucket. If you need only to store data that is infrequently accessed \(once or twice each month\) for a long period of time, we recommend that you select **IA** for the **Storage Class** parameter when you create an OSS bucket. For more information, see[Create buckets](/intl.en-US/Console User Guide/Manage buckets/Create buckets.md).
+
+## Use an ordinary account
 
 1.  Log on to the [Cloud Config console](https://config.console.aliyun.com).
 
@@ -19,16 +20,67 @@ OSS is activated. For more information, see [Activate OSS](/intl.en-US/Console U
 
     |Parameter|Description|
     |---------|-----------|
-    |**Region**|The region where the OSS bucket resides.|
-    |**Bucket**|The name of the OSS bucket. The bucket name must be unique.    -   If you select **Create a bucket**, you must specify a bucket name.
-    -   If you select **Select an existing bucket of your account**, you must select an existing bucket from the Bucket drop-down list. |
-    |**Server-side Encryption**|Specifies whether to encrypt the objects in the bucket. This parameter must be specified if you select **Create a bucket**.The following encryption methods are supported:
+    | |The region where the OSS bucket resides.|
+    | |The name of the OSS bucket. The bucket name must be unique.     -   If you select **Create Bucket**, you must specify a bucket name.
+    -   If you select **Select Buckets**, you must select an existing bucket from the Bucket drop-down list. |
+    | |Specifies whether to encrypt objects in the OSS bucket. This parameter must be specified if you select **Create Bucket**. Valid values:
 
+    -   **No**
     -   **AES256**
     -   **KMS** |
 
 5.  Click **OK**.
 
 
-After the resource snapshots are delivered to the specified bucket, you can view or download JSON files on the Files page of the destination bucket in the OSS console. The path of each snapshot is in the format of /ACSLogs/AccountId/Config/RegionId/yyyy/mm/dd/.
+## Use a management account
+
+You can use a management account to deliver resource snapshots of the management account and its member accounts in your resource directory to an OSS bucket. The bucket must belong to the management account or a member account. Only management accounts are authorized to deliver resource snapshots. No member accounts have the relevant permissions.
+
+1.  Log on to the [Cloud Config console](https://config.console.aliyun.com).
+
+2.  In the left-side navigation pane, choose **Delivery Services** \> **Deliver Logs to OSS**.
+
+3.  On the **Deliver Logs to OSS** page, turn on the **OSS Settings** switch.
+
+4.  Set the required parameters to specify an OSS bucket to store resource snapshots.
+
+    You can create an OSS bucket within the current management account, or select an existing OSS bucket that belongs to the management account or a member account. The OSS bucket stores the resource snapshots within the management account and its member accounts.
+
+    -   To deliver resource snapshots to an OSS bucket that belongs to the management account, select **Create Bucket** or **Select Buckets**, and then set the required parameters. The following table describes the parameters.
+
+        |Parameter|Description|
+        |---------|-----------|
+        | |The region where the OSS bucket resides.|
+        | |The name of the OSS bucket. The bucket name must be unique.         -   If you select **Create Bucket**, you must specify a bucket name.
+        -   If you select **Select Buckets**, you must select an existing bucket from the Bucket drop-down list. |
+        | |Specifies whether to encrypt objects in the OSS bucket. This parameter must be specified if you select **Create Bucket**. Valid values:
+
+        -   **No**
+        -   **AES256**
+        -   **KMS** |
+
+    -   To deliver resource snapshots to an OSS bucket that belongs to a member account, select **Select Buckets from Other Enterprise Management Accounts**, and then set the required parameters. Before you set the parameters, make sure that the member account has an available bucket. The following table describes the parameters that are used to specify the Alibaba Cloud Resource Name \(ARN\) of the bucket within the member account and the ARN of the role to be assumed by the member account.
+
+        |Parameter|Description|
+        |---------|-----------|
+        | |The ARN of the bucket within the member account, such as `acs:oss:ap-southeast-1:178589740730****:test123`. Before you set this parameter, make sure that you have obtained the ID of the member account, the region where the bucket resides, and the name of the bucket.
+
+The ARN must be in the format of `acs:oss:{regionId}:{Aliuid}:{bucketName}`. The following list describes the fields:
+
+        -   `{regionId}`: the ID of the region where the bucket resides, such as ap-southeast-1.
+        -   `{Aliuid}`: the ID of the member account, such as 178589740730\*\*\*\*.
+        -   `{bucketName}`: the name of the bucket, such as test123. |
+        | |The ARN of the role to be assumed by the member account, such as `acs:ram::178589740730****:role/aliyunserviceroleforconfig`. Before you set this parameter, make sure that you have obtained the ID of the member account. Then, set the parameter based on the required format.
+
+The ARN must be in the format of `acs:ram::{Aliuid}:role/aliyunserviceroleforconfig`. The following list describes the fields:
+
+        -   `{Aliuid}`: the ID of the member account, such as 178589740730\*\*\*\*.
+        -   `aliyunserviceroleforconfig`: the service-linked role of Cloud Config that authorizes Cloud Config to deliver resource snapshots to the specified bucket. |
+
+5.  Click .
+
+
+After the resource snapshots are delivered to the specified bucket, you can view or download JSON files on the Files page of the bucket in the OSS console. For information about the sample code that is used to deliver snapshots in the JSON format, see [Sample code used to deliver resource snapshots to OSS](/intl.en-US/Resource Snapshots/Sample code used to deliver resource snapshots to OSS.md).
+
+The path of each snapshot is in the format of /ACSLogs/AccountId/Config/RegionId/yyyy/mm/dd/.
 
