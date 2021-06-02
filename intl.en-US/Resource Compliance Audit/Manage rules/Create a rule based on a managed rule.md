@@ -39,14 +39,14 @@ Cloud Config allows you to manage the following two types of rules:
 
 9.  In the **Modify** step, click **Next**.
 
-    For managed rules that allow you to modify the remediation settings, you can select the check box next to **Modify** and set the remediation method, remediation type, and parameters involved. For more information, see [t1877224.md\#](/intl.en-US/Resource Compliance Audit/Remediation settings/Configure automatic remediation.md) or [t1877298.md\#](/intl.en-US/Resource Compliance Audit/Remediation settings/Configure manual remediation.md).
+    For managed rules that allow you to modify the remediation settings, you can select the check box next to **Modify** and set the remediation method, remediation type, and parameters involved. For more information, see [Configure automatic remediation](/intl.en-US/Resource Compliance Audit/Remediation settings/Configure automatic remediation.md) or [Configure manual remediation](/intl.en-US/Resource Compliance Audit/Remediation settings/Configure manual remediation.md).
 
 10. In the **Preview and Save** step, check the configurations and click **Submit**.
 
 11. Verify that the rule is created.
 
-    -   Click . On the page that appears, you can view the rule details on the , , and tabs.
-    -   Click . In the **Rules** list, you can view the status of the created rule in the Status column. In normal cases, the rule is in the **Active** state.
+    -   Click **View Details**. On the page that appears, you can view the rule details on the **Rule Details**, **Result**, and **Correction Details** tabs.
+    -   Click **Return to Rule List**. In the **Rules** list, you can view the status of the created rule in the Status column. In normal cases, the rule is in the **Active** state.
 
 ## Use a management account
 
@@ -74,12 +74,12 @@ Cloud Config allows you to manage the following two types of rules:
 
 10. In the **Modify** step, click **Next**.
 
-    For managed rules that allow you to modify the remediation settings, you can select the check box next to **Modify** and set the remediation method, remediation type, and parameters involved. For more information, see [t1877224.md\#](/intl.en-US/Resource Compliance Audit/Remediation settings/Configure automatic remediation.md) or [t1877298.md\#](/intl.en-US/Resource Compliance Audit/Remediation settings/Configure manual remediation.md).
+    For managed rules that allow you to modify the remediation settings, you can select the check box next to **Modify** and set the remediation method, remediation type, and parameters involved. For more information, see [Configure automatic remediation](/intl.en-US/Resource Compliance Audit/Remediation settings/Configure automatic remediation.md) or [Configure manual remediation](/intl.en-US/Resource Compliance Audit/Remediation settings/Configure manual remediation.md).
 
 11. In the **Preview and Save** step, check the configurations and click **Submit**.
 
 12. Verify that the rule is created.
 
-    -   Click . On the page that appears, you can view the rule details on the , , and tabs.
-    -   Click . In the **Rules** list, you can view the status of the created rule in the Status column. In normal cases, the rule is in the **Active** state.
+    -   Click **View Details**. On the page that appears, you can view the rule details on the **Rule Details**, **Result**, and **Correction Details** tabs.
+    -   Click **Return to Rule List**. In the **Rules** list, you can view the status of the created rule in the Status column. In normal cases, the rule is in the **Active** state.
 
