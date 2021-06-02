@@ -20,10 +20,10 @@ To achieve a balance between storage costs and scenario-specific requirements, w
 
     |Parameter|Description|
     |---------|-----------|
-    | |The region where the OSS bucket resides.|
-    | |The name of the OSS bucket. The bucket name must be unique.     -   If you select **Create Bucket**, you must specify a bucket name.
+    |**Region**|The region where the OSS bucket resides.|
+    |**Bucket**|The name of the OSS bucket. The bucket name must be unique.     -   If you select **Create Bucket**, you must specify a bucket name.
     -   If you select **Select Buckets**, you must select an existing bucket from the Bucket drop-down list. |
-    | |Specifies whether to encrypt objects in the OSS bucket. This parameter must be specified if you select **Create Bucket**. Valid values:
+    |**Server-side Encryption**|Specifies whether to encrypt objects in the OSS bucket. This parameter must be specified if you select **Create Bucket**. Valid values:
 
     -   **No**
     -   **AES256**
@@ -50,10 +50,10 @@ You can use a management account to deliver resource snapshots of the management
 
         |Parameter|Description|
         |---------|-----------|
-        | |The region where the OSS bucket resides.|
-        | |The name of the OSS bucket. The bucket name must be unique.         -   If you select **Create Bucket**, you must specify a bucket name.
+        |**Region**|The region where the OSS bucket resides.|
+        |**Bucket**|The name of the OSS bucket. The bucket name must be unique.         -   If you select **Create Bucket**, you must specify a bucket name.
         -   If you select **Select Buckets**, you must select an existing bucket from the Bucket drop-down list. |
-        | |Specifies whether to encrypt objects in the OSS bucket. This parameter must be specified if you select **Create Bucket**. Valid values:
+        |**Server-side Encryption**|Specifies whether to encrypt objects in the OSS bucket. This parameter must be specified if you select **Create Bucket**. Valid values:
 
         -   **No**
         -   **AES256**
@@ -63,21 +63,17 @@ You can use a management account to deliver resource snapshots of the management
 
         |Parameter|Description|
         |---------|-----------|
-        | |The ARN of the bucket within the member account, such as `acs:oss:ap-southeast-1:178589740730****:test123`. Before you set this parameter, make sure that you have obtained the ID of the member account, the region where the bucket resides, and the name of the bucket.
-
-The ARN must be in the format of `acs:oss:{regionId}:{Aliuid}:{bucketName}`. The following list describes the fields:
+        |**The ARN of the bucket that belongs to the destination account**|The ARN of the bucket within the member account, such as `acs:oss:ap-southeast-1:178589740730****:test123`. The ARN must be in the format of `acs:oss:{regionId}:{Aliuid}:{bucketName}`. The following list describes the fields:
 
         -   `{regionId}`: the ID of the region where the bucket resides, such as ap-southeast-1.
         -   `{Aliuid}`: the ID of the member account, such as 178589740730\*\*\*\*.
         -   `{bucketName}`: the name of the bucket, such as test123. |
-        | |The ARN of the role to be assumed by the member account, such as `acs:ram::178589740730****:role/aliyunserviceroleforconfig`. Before you set this parameter, make sure that you have obtained the ID of the member account. Then, set the parameter based on the required format.
-
-The ARN must be in the format of `acs:ram::{Aliuid}:role/aliyunserviceroleforconfig`. The following list describes the fields:
+        |**The role ARN that belongs to the destination account**|The ARN of the role to be assumed by the member account, such as `acs:ram::178589740730****:role/aliyunserviceroleforconfig`. The ARN must be in the format of `acs:ram::{Aliuid}:role/aliyunserviceroleforconfig`. The following list describes the fields:
 
         -   `{Aliuid}`: the ID of the member account, such as 178589740730\*\*\*\*.
         -   `aliyunserviceroleforconfig`: the service-linked role of Cloud Config that authorizes Cloud Config to deliver resource snapshots to the specified bucket. |
 
-5.  Click .
+5.  Click **OK**.
 
 
 After the resource snapshots are delivered to the specified bucket, you can view or download JSON files on the Files page of the bucket in the OSS console. For information about the sample code that is used to deliver snapshots in the JSON format, see [Sample code used to deliver resource snapshots to OSS](/intl.en-US/Resource Snapshots/Sample code used to deliver resource snapshots to OSS.md).
