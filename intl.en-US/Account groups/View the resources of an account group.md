@@ -6,7 +6,7 @@ A management account is used to log on to the Cloud Config console.
 
 -   A management account can view the configuration details, configuration timeline, compliance timeline, and associated resources of a member account in an account group.
 -   If a management account adds a member account to multiple account groups, the resources of the member account are displayed in the resource list of each account group.
--   If a management account creates different rules for multiple account groups, the compliance results and compliance timelines of resources in the account groups are different. Even if the member accounts and resources in the account groups are the same, the compliance results and compliance timelines of resources are still different.
+-   If a management account creates different rules for multiple account groups, the compliance evaluation results and compliance timelines of resources in the account groups are different. Even if the member accounts and resources in the account groups are the same, the compliance evaluation results, associated rules, and compliance timelines of resources are still different.
 
 ## View the resource list
 
@@ -22,5 +22,5 @@ For more information, see [View the configuration timeline of a resource](/intl.
 
 ## View the compliance timeline of a resource
 
-For more information, see [View the compliance timeline of a resource](https://www.alibabacloud.com/help/doc-detail/127407.htm).
+For more information, see [View the compliance timeline of a resource](/intl.en-US/Resource Compliance Audit/View compliance evaluation results/View the compliance timeline of a resource.md).
 
