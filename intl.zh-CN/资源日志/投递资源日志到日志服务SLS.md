@@ -55,25 +55,21 @@
 
         |参数|描述|
         |--|--|
-        |**目标账号中日志库的ARN**|目标成员账号中日志库的ARN，例如：`acs:log:ap-southeast-1:178589740730****:project/project1/logstore/logstore1`。设置该参数之前，请确保您已获取目标成员账号的ID、日志项目地域、日志项目名称和日志库名称。
-
-ARN格式为`acs:log:{regionId}:{Aliuid}:project/{projectName}/logstore/{logstoreName}`，各参数含义如下：
+        |**目标账号中日志库的ARN**|目标成员账号中日志库的ARN，例如：`acs:log:ap-southeast-1:178589740730****:project/project1/logstore/logstore1`。ARN格式为`acs:log:{regionId}:{AccountID}:project/{projectName}/logstore/{logstoreName}`，各参数含义如下：
 
         -   `{regionId}`：日志项目所在地域ID，例如：ap-southeast-1。
-        -   `{Aliuid}`：成员账号ID，例如：178589740730\*\*\*\*。
+        -   `{AccountID}`：成员账号ID，例如：178589740730\*\*\*\*。
         -   `{projectName}`：日志项目名称，例如：project1。
         -   `{logstoreName}`：日志库名称，例如：logstore1。 |
-        |**目标账号中需扮演角色的ARN**|目标成员账号需要扮演角色的ARN，例如：`acs:ram::178589740730****:role/aliyunserviceroleforconfig`。设置该参数之前，请确保您已获取目标成员账号ID，再根据ARN的格式填写。
+        |**目标账号中需扮演角色的ARN**|目标成员账号需要扮演角色的ARN，例如：`acs:ram::178589740730****:role/aliyunserviceroleforconfig`。ARN格式为`acs:ram::{AccountID}:role/aliyunserviceroleforconfig`，各参数含义如下：
 
-ARN格式为`acs:ram::{Aliuid}:role/aliyunserviceroleforconfig`，各参数含义如下：
-
-        -   `{Aliuid}`：成员账号ID，例如：178589740730\*\*\*\*。
-        -   `aliyunserviceroleforconfig`：目标成员账号中向指定日志项目推送资源配置变更日志的角色，或目标成员账号中配置审计的关联角色。 |
+        -   `{AccountID}`：成员账号ID，例如：178589740730\*\*\*\*。
+        -   `aliyunserviceroleforconfig`：配置审计服务关联角色。 |
 
 5.  单击**确定**。
 
 
 资源日志投递到指定日志库后，您可以在该日志库中查询和分析指定时间段内所有的资源日志。具体操作，请参见[查询和分析日志](/intl.zh-CN/查询与分析/查询和分析日志.md)。
 
-关于JSON格式文件的代码示例，请参见[资源日志投递到日志服务SLS的代码示例](/intl.zh-CN/资源日志/资源日志投递到日志服务SLS的代码示例.md)。
+关于JSON格式文件的代码示例，请参见[投递资源日志到日志服务SLS的代码示例](/intl.zh-CN/资源日志/投递资源日志到日志服务SLS的代码示例.md)。
 
