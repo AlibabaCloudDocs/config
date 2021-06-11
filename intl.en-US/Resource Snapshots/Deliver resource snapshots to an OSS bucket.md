@@ -4,7 +4,7 @@ If you want to deliver resource change snapshots and scheduled resource snapshot
 
 OSS is activated. For more information, see [Activate OSS](/intl.en-US/Console User Guide/Sign up for OSS.md).
 
-To achieve a balance between storage costs and scenario-specific requirements, we recommend that you select **Standard** for the **Storage Class** parameter when you create an OSS bucket. If you need only to store data that is infrequently accessed \(once or twice each month\) for a long period of time, we recommend that you select **IA** for the **Storage Class** parameter when you create an OSS bucket. For more information, see[Create buckets](/intl.en-US/Console User Guide/Manage buckets/Create buckets.md).
+To achieve a balance between storage costs and scenario-specific requirements, we recommend that you select **Standard** for the **Storage Class** parameter when you create an OSS bucket. If you need only to store data that is infrequently accessed \(once or twice each month\) for a long period of time, we recommend that you select **IA** for the **Storage Class** parameter when you create an OSS bucket. For more information, see [Create buckets](/intl.en-US/Console User Guide/Manage buckets/Create buckets.md).
 
 ## Use an ordinary account
 
