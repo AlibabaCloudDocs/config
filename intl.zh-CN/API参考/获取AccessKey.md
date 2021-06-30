@@ -15,26 +15,26 @@ AccessKey包括AccessKey ID和AccessKey Secret。
 
 3.  在**安全提示**对话框，选择使用阿里云账号AccessKey或RAM用户AccessKey。
 
-    ![安全提示](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/9628670061/p48002.png)
+    ![安全提示](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3675425061/p48002.png)
 
     -   使用阿里云账号AccessKey
         1.  单击**继续使用AccessKey**。
         2.  在AccessKey管理页面，单击**创建AccessKey**。
         3.  在创建AccessKey对话框，查看AccessKey ID和AccessKey Secret。可以单击**下载CSV文件**，下载AccessKey信息。或者单击**复制**，复制AccessKey信息。
 
-            ![新建用户AccessKey](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/8947359951/p48003.png)
+            ![新建用户AccessKey](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8947359951/p48003.png)
 
     -   使用RAM用户AccessKey
         1.  单击**开始使用子用户AccessKey**。
         2.  系统自动跳转到[RAM控制台](https://ram.console.aliyun.com/users/new)的用户页面，找到需要获取AccessKey的RAM用户。
 
-            **说明：** 如果没有RAM用户，请先创建RAM用户，详情请参见[创建RAM用户](/intl.zh-CN/用户管理/创建RAM用户.md)。
+            **说明：** 如果没有RAM用户，请先创建RAM用户，详情请参见[创建RAM用户](/intl.zh-CN/用户管理/基本操作/创建RAM用户.md)。
 
         3.  单击用户登录名称。
         4.  在认证管理页签下的用户AccessKey区域，单击**创建AccessKey**。
         5.  在创建AccessKey页面，查看AccessKey ID和AccessKey Secret。可以单击**下载CSV文件**，下载AccessKey信息。或者单击**复制**，复制AccessKey信息。
 
-            ![创建AccessKey](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/8947359951/p48004.png)
+            ![创建AccessKey](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/7037906061/p48004.png)
 
             **说明：**
 
