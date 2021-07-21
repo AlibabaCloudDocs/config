@@ -1,25 +1,25 @@
 # EIP
 
-检测您账号下的弹性公网IP（EIP）是否绑定云资源。当您账号下的弹性公网IP未绑定云资源时，会导致该规则不合规。弹性公网IP绑定的云资源类型有：ECS实例、NAT网关、SLB实例和辅助弹性网卡。
+本文介绍配置审计为弹性公网IP（EIP）提供的托管规则详情，以及当规则不合规时的修复方法。
 
-## 规则说明
+## eip\_attached
 
-|参数|说明|
-|--|--|
-|规则名称|eip-attached|
-|触发机制|配置变更|
-|监控的资源类型|ACS::EIP::EipAddress|
-|规则入参名称|无|
-|规则介绍|检测您账号下的弹性公网IP是否绑定云资源。如果绑定云资源视为“合规”；反之，视为“不合规”。|
+您可以使用该规则检测弹性公网IP实例是否已绑定到ECS实例或NAT实例。如果弹性公网IP已绑定到ECS或NAT实例，视为“合规”。
 
-## 改进建议
+触发机制：配置变更
+
+资源：ACS::EIP::EipAddress
+
+参数：无
+
+修复指南：查看您的弹性公网IP是否绑定实例，如果未绑定，则会导致该规则不合规。将弹性公网IP绑定到实例上，绑定的实例类型有ECS实例和NAT实例。配置审计会在10分钟内感知到您的修改并自动启动审计。修复方法如下：
 
 -   控制台
 
-    关于如何绑定ECS实例、NAT网关、SLB实例和弹性网卡，请参见[绑定云资源](/cn.zh-CN/用户指南/绑定云资源/绑定云资源.md)。
+    关于弹性公网IP实例如何绑定ECS实例和NAT网关，请参见[绑定云资源](/cn.zh-CN/用户指南/绑定云资源/绑定云资源.md)。
 
 -   API
 
-    调用AssociateEipAddress接口将弹性公网IP绑定到同地域的云资源上。更多信息，请参见[AssociateEipAddress](/cn.zh-CN/API参考/弹性公网IP/AssociateEipAddress.md)。
+    调用AssociateEipAddress接口将弹性公网IP绑定到同地域的云资源上，请参见[AssociateEipAddress](/cn.zh-CN/API参考/弹性公网IP/AssociateEipAddress.md)。
 
 
